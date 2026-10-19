@@ -734,6 +734,23 @@ $$('.chips[data-name]').forEach(g => {
 });
 const chipVal = name => { const g = document.querySelector(`.chips[data-name="${name}"]`); return g ? [...g.querySelectorAll('.chip.on')].map(c => c.dataset.v || clean(c)).join(', ') : ''; };
 const chipShow = name => { const g = document.querySelector(`.chips[data-name="${name}"]`); return g ? [...g.querySelectorAll('.chip.on')].map(c => clean(c).replace(/\s*\d.*$/,'')).join(', ') : ''; };
+// ---------- 매장 접수 모드 (?store=청계) ----------
+const STORE = (new URLSearchParams(location.search).get('store') || '').trim();
+const STORES = ['청계','서여의도','상암','마곡','동대문'];
+const IS_STORE = STORES.includes(STORE);
+if (IS_STORE) {
+  const bn = document.createElement('div');
+  bn.style.cssText = 'background:#0F2A20;color:#FFFDFC;border-radius:16px;padding:18px 20px;margin:0 0 18px;line-height:1.7';
+  bn.innerHTML = '<b style="font-size:16px">매장 직원 접수 모드 · ' + STORE + '</b><br><span style="opacity:.85;font-size:14px">손님 대신 접수하는 화면이에요. 이름과 전화번호만 꼭 받아 주세요. 이메일이 없으면 비워 두셔도 돼요. 본사 대관 담당이 24시간 안에 직접 연락드려요.</span>';
+  document.getElementById('f').prepend(bn);
+  const c = [...document.querySelectorAll('.chips[data-name="희망 지점"] .chip')].find(x => (x.dataset.v||'').startsWith(STORE));
+  if (c) c.classList.add('on');
+  const em = document.getElementById('email'); em.placeholder = '손님 이메일 (없으면 비워두기)';
+  document.querySelector('#fEmail label').innerHTML = '이메일 <span class="hint">선택 · 매장 접수</span>';
+  document.querySelector('#fEmail .err').textContent = '이메일 형식이 맞지 않아요. 모르면 비워 두세요.';
+  const tl = document.querySelector('label[for="tel"]'); if (tl) tl.innerHTML = '전화번호 <span class="req">*</span>';
+  ['#agree','#agree2'].forEach(s => { const x = document.querySelector(s); x.checked = true; });
+}
 $$('[data-xmas]').forEach(b => b.addEventListener('click', () => { const c = document.querySelector('.chips[data-name="행사 종류"] .chip[data-v^="크리스마스"]'); if(c && !c.classList.contains('on')) c.click(); }));
 
 // package
@@ -837,7 +854,8 @@ $('#f').addEventListener('submit', async ev => {
   let ok = true;
   const name = $('#name').value.trim(), email = $('#email').value.trim();
   $('#fName').classList.toggle('bad', !name); if(!name) ok = false;
-  const em = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email); $('#fEmail').classList.toggle('bad', !em); if(!em) ok = false;
+  const em = (IS_STORE && !email) || /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email); $('#fEmail').classList.toggle('bad', !em); if(!em) ok = false;
+  if (IS_STORE && !$('#tel').value.trim()) { ok = false; $('#tel').closest('.fld').classList.add('bad'); $('#tel').focus(); }
   const ag = $('#agree').checked && $('#agree2').checked; $('#fAgree').classList.toggle('bad', !ag); if(!ag) ok = false;
   const gOk = (+gIn.value||0) >= 1; gIn.closest('.fld').classList.toggle('bad', !gOk); if(!gOk) ok = false;
   if(!ok){ const b = document.querySelector('.fld.bad'); b && b.scrollIntoView({behavior:'smooth', block:'center'}); return; }
@@ -851,7 +869,7 @@ $('#f').addEventListener('submit', async ev => {
     '패키지': pkSel==='D' ? 'CUSTOM · 맞춤 견적' : `${PK[pkSel].n} · 1인 ${PK[pkSel].p}만원`,
     '음식 추가 옵션': chipVal('음식 추가 옵션'), '음료·와인 옵션': chipVal('음료·와인 옵션'), '연출·장비 옵션': chipVal('연출·장비 옵션'), '서비스 옵션': chipVal('서비스 옵션'),
     '식이 제한·알레르기': $('#diet').value.trim(), '예산': chipVal('예산'), '결제·증빙': chipVal('결제·증빙'), '알게 된 경로': chipVal('알게 된 경로'),
-    '요청사항·질문': $('#note').value.trim(), '예상 금액': `${e.total} (${e.calc})`, '개인정보 동의': '동의(규정 확인 포함)', '마케팅 수신 동의': $('#mkt').checked ? '동의' : '미동의', '유입 경로': src,
+    '요청사항·질문': $('#note').value.trim(), '예상 금액': `${e.total} (${e.calc})`, '개인정보 동의': '동의(규정 확인 포함)', '마케팅 수신 동의': $('#mkt').checked ? '동의' : '미동의', '유입 경로': (IS_STORE ? '매장:' + STORE + ' | ' : '') + src,
     '희망 날짜 1': picked[0]||'', '희망 날짜 2': picked[1]||'', '희망 날짜 3': picked[2]||'',
     '언어': LANG, '봇체크': `v1|${secs}|${$('#website').value ? 'hp' : 'ok'}`,
   };
