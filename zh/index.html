@@ -1,0 +1,883 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<script>if(!/\/$|\.html$/.test(location.pathname))location.replace(location.pathname+"/"+location.search+location.hash);</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>包场与派对咨询 | TAP SHOP BAR</title>
+<meta name="description" content="婚礼后派对、生日、公司聚会皆可承办。可整场包下TAP SHOP BAR，也可只订包间。每人55,000韩元起，24小时内发送报价。">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="TAP SHOP BAR">
+<meta property="og:title" content="TAP SHOP BAR 包场咨询 · 每人55,000韩元起，24小时内报价">
+<meta property="og:description" content="婚礼后派对、生日、公司聚会。每人55,000韩元起，24小时内报价。">
+<meta property="og:url" content="https://tapshopbar.github.io/party/zh/">
+<meta property="og:image" content="https://tapshopbar.github.io/party/assets/loc_cheonggye.jpg">
+<meta property="og:image:secure_url" content="https://tapshopbar.github.io/party/assets/loc_cheonggye.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="../assets/favicon.png">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css">
+<style>
+:root{
+  --wine:#4A0B18; --wine2:#6E1426; --wine3:#3A0812; --navy:#141B33; --rose:#B5707E; --rose-bg:#F6ECEE;
+  --yellow:#FFC100; --cream:#FFFDFC; --ink:#0E0E0E; --sub:#6b6b6b; --line:#E7E3E1; --soft:#F5F2F0; --blue:#156DFF;
+  --r:18px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:"Pretendard Variable",Pretendard,-apple-system,"Apple SD Gothic Neo","Noto Sans KR",sans-serif;font-size:16px;line-height:1.7;-webkit-font-smoothing:antialiased;word-break:keep-all}
+img{display:block;max-width:100%}
+html[lang=ja] body,html[lang^=zh] body{word-break:normal;overflow-wrap:anywhere;line-break:strict}
+a{color:inherit}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+.eyebrow{font-size:12.5px;letter-spacing:.18em;text-transform:uppercase;font-weight:600}
+h1,h2,h3{margin:0;letter-spacing:-.02em;line-height:1.2}
+h2{font-size:clamp(28px,4vw,44px);font-weight:700}
+.lead{font-size:17px;color:var(--sub);max-width:640px}
+section{padding:110px 0;scroll-margin-top:60px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:15px 26px;border-radius:999px;font-weight:600;font-size:15.5px;text-decoration:none;border:0;cursor:pointer;transition:transform .15s ease,background .2s}
+.btn:hover{transform:translateY(-1px)}
+.btn-wine{background:var(--wine);color:var(--cream)}
+.btn-wine:hover{background:var(--wine2)}
+.btn-ghost{background:transparent;color:var(--cream);box-shadow:inset 0 0 0 1.5px rgba(255,253,252,.6)}
+.badge{display:inline-block;background:var(--yellow);color:var(--ink);font-size:11.5px;font-weight:700;padding:3px 9px;border-radius:999px;letter-spacing:.02em}
+
+/* header */
+.hdr{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:16px 28px;transition:background .25s,box-shadow .25s}
+.hdr .logo{height:20px;filter:invert(1)}
+.hdr nav{display:flex;gap:26px;align-items:center}
+.hdr nav a{color:var(--cream);text-decoration:none;font-size:14.5px;font-weight:500;opacity:.92}
+.hdr .cta{background:var(--cream);color:var(--wine)!important;padding:9px 18px;border-radius:999px;font-weight:700!important;opacity:1!important}
+.hdr.solid{background:rgba(255,253,252,.94);backdrop-filter:blur(10px);box-shadow:0 1px 0 var(--line)}
+.hdr.solid .logo{filter:none}
+.hdr.solid nav a{color:var(--ink)}
+.hdr.solid .cta{background:var(--wine);color:var(--cream)!important}
+@media(max-width:760px){.hdr nav a:not(.cta){display:none}.hdr{padding:14px 18px}}
+
+.hdr-tag{font-size:12.5px;font-weight:700;letter-spacing:.02em;color:var(--cream);border:1.5px solid rgba(255,253,252,.7);border-radius:999px;padding:3px 10px}
+.hdr.solid .hdr-tag{color:var(--wine);border-color:var(--wine)}
+.hero-tag{display:inline-block;background:var(--cream);color:var(--wine);font-weight:800;font-size:15px;padding:7px 14px;border-radius:999px;margin-top:16px}
+@media(max-width:760px){.hdr-tag{display:none}}
+/* hero */
+.hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;color:var(--cream);padding:0 0 90px;overflow:hidden}
+.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1.04)}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,27,51,.25) 0%,rgba(58,8,18,.35) 45%,rgba(58,8,18,.92) 100%)}
+.hero .wrap{position:relative;z-index:2;width:100%}
+.hero h1{font-size:clamp(42px,7vw,88px);font-weight:800;letter-spacing:-.035em;line-height:1.05;margin:18px 0 22px}
+.hero p{font-size:clamp(16px,1.6vw,19px);max-width:560px;opacity:.92;margin:0 0 34px}
+.hero .row{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.hero .note{margin-left:8px;font-size:14px;opacity:.85}
+
+/* stats */
+.stats{background:var(--wine);color:var(--cream);padding:34px 0}
+.stats .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.stats b{display:block;font-size:30px;font-weight:800;letter-spacing:-.02em}
+.stats span{font-size:14px;opacity:.8}
+@media(max-width:760px){.stats .grid{grid-template-columns:repeat(2,1fr);row-gap:24px}}
+
+/* occasions */
+.occ{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:44px}
+.occ .c{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:24px 20px 22px;min-height:170px;display:flex;flex-direction:column;justify-content:space-between}
+.occ .c i{font-style:normal;font-size:12px;letter-spacing:.14em;color:var(--rose);font-weight:700}
+.occ .c h3{font-size:19px;margin:10px 0 6px}
+.occ .c p{margin:0;font-size:14px;color:var(--sub);line-height:1.6}
+@media(max-width:980px){.occ{grid-template-columns:repeat(2,1fr)}}
+
+/* spaces */
+.spaces{background:var(--soft)}
+.sp-grid{display:grid;grid-template-columns:1.35fr 1fr;gap:18px;margin-top:44px}
+.sp{position:relative;border-radius:22px;overflow:hidden;background:#000;color:var(--cream);min-height:300px}
+.sp img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.9;transition:transform .6s}
+.sp:hover img{transform:scale(1.03)}
+.sp:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 35%,rgba(14,14,14,.82) 100%)}
+.sp .t{position:absolute;left:24px;right:24px;bottom:22px;z-index:2}
+.sp .t h3{font-size:24px;margin:8px 0 4px}
+.sp .t p{margin:0;font-size:14.5px;opacity:.88}
+.sp .tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:12px}
+.sp .tags span{font-size:12px;padding:4px 10px;border-radius:999px;background:rgba(255,253,252,.16);backdrop-filter:blur(6px)}
+.sp.big{grid-row:span 2;min-height:620px}
+.sp.soon{background:linear-gradient(140deg,var(--wine2),var(--wine3) 60%,var(--navy))}
+.sp.soon .mark{position:absolute;right:24px;top:22px;z-index:2;font-size:13px;letter-spacing:.2em;opacity:.8}
+.sp-row{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:18px}
+.sp-row .sp{min-height:240px}
+@media(max-width:900px){.sp-grid,.sp-row{grid-template-columns:1fr}.sp.big{min-height:420px;grid-row:auto}}
+
+/* packages */
+.pk-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:44px}
+.pk{background:#fff;border:1px solid var(--line);border-radius:22px;padding:28px 24px;display:flex;flex-direction:column}
+.pk.rec{background:var(--wine);color:var(--cream);border-color:var(--wine)}
+.pk .nm{display:flex;justify-content:space-between;align-items:center;font-weight:700;font-size:15px;letter-spacing:.04em}
+.pk .pr{font-size:40px;font-weight:800;letter-spacing:-.03em;margin:18px 0 0}
+.pk .pr small{font-size:15px;font-weight:600;opacity:.75;margin-left:4px}
+.pk .per{font-size:13px;opacity:.7;margin-bottom:18px}
+.pk ul{list-style:none;margin:0;padding:18px 0 0;border-top:1px solid var(--line);font-size:14.5px}
+.pk.rec ul{border-color:rgba(255,253,252,.2)}
+.pk li{padding:6px 0 6px 18px;position:relative}
+.pk li:before{content:"";position:absolute;left:0;top:15px;width:7px;height:7px;border-radius:50%;background:var(--rose)}
+.pk.rec li:before{background:var(--yellow)}
+.pk .pick{margin-top:auto;padding-top:22px}
+.pk .pick button{width:100%;justify-content:center}
+.pk.rec .pick button{background:var(--cream);color:var(--wine)}
+.pk:not(.rec) .pick button{background:var(--soft);color:var(--ink)}
+.incl{margin-top:26px;display:flex;flex-wrap:wrap;gap:10px 26px;font-size:14.5px;color:var(--sub)}
+.incl b{color:var(--ink)}
+@media(max-width:1000px){.pk-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.pk-grid{grid-template-columns:1fr}}
+
+/* process */
+.process{background:var(--navy);color:var(--cream)}
+.process .lead{color:rgba(255,253,252,.72)}
+.steps{display:grid;grid-template-columns:repeat(5,1fr);gap:0;margin-top:50px;border-top:1px solid rgba(255,253,252,.18)}
+.steps .s{padding:26px 22px 0 0}
+.steps .n{font-size:13px;letter-spacing:.16em;color:var(--yellow);font-weight:700}
+.steps h3{font-size:19px;margin:12px 0 8px}
+.steps p{margin:0;font-size:14.5px;color:rgba(255,253,252,.72)}
+@media(max-width:900px){.steps{grid-template-columns:1fr}.steps .s{padding:22px 0;border-bottom:1px solid rgba(255,253,252,.12)}}
+
+/* gallery */
+.gal{display:grid;grid-template-columns:repeat(6,1fr);grid-auto-rows:150px;gap:10px;margin-top:44px}
+.gal figure{margin:0;border-radius:14px;overflow:hidden;background:#ddd}
+.gal img{width:100%;height:100%;object-fit:cover}
+.g1{grid-column:span 2;grid-row:span 2}.g2{grid-column:span 2;grid-row:span 3}.g3{grid-column:span 2;grid-row:span 2}
+.g4{grid-column:span 2;grid-row:span 2}.g5{grid-column:span 2;grid-row:span 2}.g6{grid-column:span 2;grid-row:span 1}
+.g7{grid-column:span 3;grid-row:span 2}.g8{grid-column:span 3;grid-row:span 2}
+@media(max-width:760px){.gal{grid-template-columns:repeat(2,1fr);grid-auto-rows:130px}.gal figure{grid-column:span 1!important;grid-row:span 2!important}}
+
+/* form */
+.inq{background:var(--soft)}
+.inq-grid{display:grid;grid-template-columns:1fr 360px;gap:30px;margin-top:44px;align-items:start}
+.card{background:#fff;border:1px solid var(--line);border-radius:22px;padding:30px 30px 10px}
+.blk{padding:0 0 30px;margin:0 0 30px;border-bottom:1px solid var(--line)}
+.blk:last-of-type{border-bottom:0}
+.blk h3{font-size:18px;display:flex;align-items:center;gap:10px;margin-bottom:18px}
+.blk h3 .num{width:26px;height:26px;border-radius:50%;background:var(--wine);color:var(--cream);font-size:13px;display:inline-flex;align-items:center;justify-content:center}
+.fld{margin:0 0 20px}
+.fld>label,.fld>.lb{display:block;font-size:14px;font-weight:600;margin:0 0 9px}
+.fld .hint{font-weight:400;color:var(--sub);font-size:13px;margin-left:6px}
+.req{color:var(--wine)}
+input[type=text],input[type=email],input[type=tel],input[type=date],input[type=number],select,textarea{width:100%;font:inherit;font-size:15.5px;padding:13px 14px;border:1px solid #D9D4D1;border-radius:12px;background:#fff;color:var(--ink);outline:none;transition:border .15s,box-shadow .15s}
+input:focus,select:focus,textarea:focus{border-color:var(--wine);box-shadow:0 0 0 3px rgba(74,11,24,.1)}
+textarea{min-height:96px;resize:vertical}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.three{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+@media(max-width:640px){.two,.three{grid-template-columns:1fr}}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{border:1px solid #D9D4D1;background:#fff;border-radius:999px;padding:9px 15px;font-size:14.5px;cursor:pointer;user-select:none;transition:all .15s;font-family:inherit;color:var(--ink)}
+.chip:hover{border-color:var(--wine)}
+.chip.on{background:var(--wine);border-color:var(--wine);color:var(--cream)}
+.chip small{opacity:.7;margin-left:4px;font-size:12.5px}
+.pkopts{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.pko{border:1px solid #D9D4D1;border-radius:14px;padding:14px 16px;cursor:pointer;background:#fff;text-align:left;font-family:inherit;color:var(--ink)}
+.pko b{display:block;font-size:15.5px}
+.pko span{font-size:13px;color:var(--sub)}
+.pko.on{border-color:var(--wine);box-shadow:inset 0 0 0 1.5px var(--wine);background:var(--rose-bg)}
+@media(max-width:640px){.pkopts{grid-template-columns:1fr}}
+.stepper{display:flex;align-items:center;gap:10px}
+.stepper button{width:44px;height:44px;border-radius:12px;border:1px solid #D9D4D1;background:#fff;font-size:20px;cursor:pointer}
+.stepper input{width:110px;text-align:center;font-weight:700;font-size:18px}
+input[type=range]{width:100%;accent-color:var(--wine);margin-top:12px}
+.chk{display:flex;gap:10px;align-items:flex-start;font-size:14px;color:#333;margin:10px 0}
+.chk input{margin-top:5px;accent-color:var(--wine);width:17px;height:17px}
+.err{color:#B3261E;font-size:13px;margin-top:6px;display:none}
+.fld.bad .err{display:block}
+.fld.bad input{border-color:#B3261E}
+.submit{width:100%;justify-content:center;font-size:16.5px;padding:17px;margin:6px 0 24px}
+
+/* estimate */
+.est{position:sticky;top:90px;background:var(--wine);color:var(--cream);border-radius:22px;padding:28px 26px}
+.est .k{font-size:12.5px;letter-spacing:.16em;opacity:.75;font-weight:600}
+.est .total{font-size:42px;font-weight:800;letter-spacing:-.03em;margin:10px 0 2px;line-height:1.1}
+.est .calc{font-size:14px;opacity:.82}
+.est ul{list-style:none;padding:18px 0 0;margin:18px 0 0;border-top:1px solid rgba(255,253,252,.2);font-size:14px}
+.est li{display:flex;justify-content:space-between;gap:12px;padding:5px 0}
+.est li span:first-child{opacity:.7}
+.est li span:last-child{text-align:right}
+.est .fine{font-size:12.5px;opacity:.7;margin-top:16px;line-height:1.6}
+.est .flag{background:rgba(255,193,0,.16);border-left:3px solid var(--yellow);padding:10px 12px;font-size:13px;margin-top:14px;border-radius:0 8px 8px 0;display:none}
+@media(max-width:980px){.inq-grid{grid-template-columns:1fr}.est{position:relative;top:0}}
+
+.done{scroll-margin-top:90px;display:none;background:#fff;border:1px solid var(--line);border-radius:22px;padding:44px 36px;text-align:left}
+.done h3{font-size:28px;margin:12px 0 10px}
+.done .sumtotal{font-size:34px;font-weight:800;color:var(--navy);margin:18px 0 4px}
+.done ol{padding-left:20px;color:#333}
+.done ol li{margin:0 0 12px}
+
+.mbar{display:none}
+@media(max-width:980px){.mbar{display:flex;position:fixed;left:12px;right:12px;bottom:12px;z-index:60;background:var(--wine);color:var(--cream);border-radius:16px;padding:12px 14px 12px 18px;align-items:center;justify-content:space-between;box-shadow:0 10px 30px rgba(0,0,0,.25);transform:translateY(140%);transition:transform .3s}.mbar.show{transform:none}.mbar b{font-size:18px}.mbar small{display:block;font-size:11.5px;opacity:.75}.mbar a{background:var(--cream);color:var(--wine);text-decoration:none;font-weight:700;padding:10px 14px;border-radius:999px;font-size:14px}}
+/* xmas banner */
+.xmas{background:radial-gradient(120% 140% at 85% 0%,#1B4433 0%,#0F2A20 55%,#0A1F17 100%);color:var(--cream);padding:70px 0;position:relative;overflow:hidden}
+.xmas:before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(255,253,252,.55) 1px,transparent 1.5px);background-size:46px 46px;opacity:.18}
+.xmas .wrap{position:relative;display:grid;grid-template-columns:1.3fr 1fr;gap:40px;align-items:center}
+.xmas h2{font-size:clamp(28px,3.6vw,42px);margin:14px 0 14px}
+.xmas p{margin:0 0 26px;color:rgba(255,253,252,.8);max-width:520px}
+.xmas .ribbon{display:inline-flex;gap:8px;align-items:center}
+.xmas .ribbon i{width:28px;height:3px;background:var(--wine2);display:inline-block}
+.xmas .pts{display:grid;gap:12px}
+.xmas .pt{background:rgba(255,253,252,.07);border:1px solid rgba(255,253,252,.14);border-radius:16px;padding:16px 18px}
+.xmas .pt b{display:block;font-size:16px}
+.xmas .pt span{font-size:14px;color:rgba(255,253,252,.72)}
+.xmas .btn-x{background:var(--cream);color:#0F2A20}
+@media(max-width:900px){.xmas .wrap{grid-template-columns:1fr}}
+/* faq */
+.faq-top{display:flex;justify-content:space-between;align-items:end;gap:20px;flex-wrap:wrap}
+.faq-tools{display:flex;gap:10px;flex-wrap:wrap;margin-top:34px;align-items:center}
+.faq-tools input{max-width:300px}
+.faq-list{margin-top:26px;border-top:1px solid var(--line)}
+details{border-bottom:1px solid var(--line)}
+summary{list-style:none;cursor:pointer;padding:22px 40px 22px 0;font-size:17px;font-weight:600;position:relative}
+summary::-webkit-details-marker{display:none}
+summary:after{content:"+";position:absolute;right:6px;top:18px;font-size:24px;font-weight:300;color:var(--wine);transition:transform .2s}
+details[open] summary:after{transform:rotate(45deg)}
+summary .c{display:inline-block;font-size:12px;color:var(--rose);font-weight:700;letter-spacing:.06em;margin-right:12px;min-width:66px}
+details p{margin:0 0 24px;padding-left:78px;color:#444;font-size:15.5px;max-width:860px}
+@media(max-width:640px){details p{padding-left:0}summary .c{display:block;margin-bottom:4px}}
+.faq-more{margin-top:28px;background:#fff;border:1px solid var(--line);border-radius:16px;padding:20px 22px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+
+/* footer */
+footer{background:var(--ink);color:rgba(255,253,252,.7);padding:60px 0 50px;font-size:13.5px}
+footer .slogan{color:var(--cream);font-size:22px;font-weight:600;letter-spacing:-.01em;margin:16px 0 24px}
+footer .logo{height:18px;filter:invert(1)}
+footer a{color:rgba(255,253,252,.85)}
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+
+/* ===== season: Winter in Wine (green) ===== */
+:root{--pine:#0F2A20;--rose:#8E2A3A}
+.hero:after{background:linear-gradient(180deg,rgba(15,42,32,.30) 0%,rgba(15,42,32,.45) 45%,rgba(10,31,23,.94) 100%)}
+.hero:before{content:"";position:absolute;inset:0;z-index:1;background-image:radial-gradient(rgba(255,253,252,.9) 1px,transparent 1.6px),radial-gradient(rgba(255,253,252,.6) 1px,transparent 1.4px);background-size:70px 70px,37px 37px;background-position:0 0,18px 22px;opacity:.22}
+.stats{background:var(--pine)}
+.pk.rec{background:var(--wine);border-color:var(--wine)}
+.est{background:var(--pine)}
+.mbar{background:var(--pine)}
+.blk h3 .num{background:var(--pine)}
+.chip.on{background:var(--pine);border-color:var(--pine)}
+.pko.on{border-color:var(--pine);box-shadow:inset 0 0 0 1.5px var(--pine);background:#EEF3F0}
+.spaces{background:#F2F0EA}
+.inq{background:#F2F0EA}
+.sp.soon{background:linear-gradient(140deg,#1B4433,var(--pine) 55%,var(--wine3))}
+.hdr .cta{color:var(--pine)!important}
+.hdr.solid .cta{background:var(--pine)}
+footer{background:#0A1F17}
+/* lang */
+.lang{display:flex;gap:2px;margin-right:6px}
+.lang a{font-size:12.5px!important;padding:4px 7px;border-radius:999px;opacity:.75!important}
+.lang a.cur{opacity:1!important;font-weight:700!important;text-decoration:underline;text-underline-offset:4px}
+@media(max-width:760px){.lang{display:flex!important}.lang a{display:inline!important;color:var(--cream)}.hdr.solid .lang a{color:var(--ink)}}
+/* approval box */
+.appr{background:#fff;border:1px solid var(--line);border-left:4px solid var(--pine);border-radius:16px;padding:22px 24px;margin:34px 0 0;display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.appr .k{font-size:12px;letter-spacing:.12em;color:var(--pine);font-weight:800}
+.appr b{display:block;font-size:16.5px;margin:6px 0 4px}
+.appr span{font-size:14px;color:var(--sub);line-height:1.6;display:block}
+@media(max-width:860px){.appr{grid-template-columns:1fr}}
+/* policy */
+.policy{background:var(--cream)}
+.pol-bar{display:grid;grid-template-columns:1fr 1fr 1fr;border-radius:18px;overflow:hidden;margin-top:40px;border:1px solid var(--line)}
+.pol-bar>div{padding:24px 22px}
+.pol-bar .p1{background:#E9F1EC}.pol-bar .p2{background:#FFF4D6}.pol-bar .p3{background:#F6E3E6}
+.pol-bar .when{font-size:13px;font-weight:700;letter-spacing:.04em;color:var(--sub)}
+.pol-bar .pct{font-size:34px;font-weight:800;letter-spacing:-.03em;margin:8px 0 2px}
+.pol-bar .p1 .pct{color:var(--pine)}.pol-bar .p2 .pct{color:#8A5A00}.pol-bar .p3 .pct{color:var(--wine)}
+.pol-bar .what{font-size:14px;color:#333}
+@media(max-width:760px){.pol-bar{grid-template-columns:1fr}}
+.pol-list{margin:26px 0 0;padding:0;list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:14px 30px}
+.pol-list li{font-size:15px;padding-left:18px;position:relative;line-height:1.65}
+.pol-list li:before{content:"";position:absolute;left:0;top:10px;width:8px;height:8px;border-radius:50%;background:var(--wine)}
+.pol-list b{color:var(--ink)}
+@media(max-width:760px){.pol-list{grid-template-columns:1fr}}
+.pol-note{margin-top:22px;font-size:13.5px;color:var(--sub)}
+/* calendar */
+.cal{border:1px solid #D9D4D1;border-radius:16px;padding:16px 16px 12px;background:#fff;max-width:420px}
+.cal-h{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
+.cal-h b{font-size:16px}
+.cal-h button{border:1px solid #D9D4D1;background:#fff;border-radius:10px;width:36px;height:36px;cursor:pointer;font-size:16px}
+.cal-g{display:grid;grid-template-columns:repeat(7,1fr);gap:4px}
+.cal-g .w{font-size:12px;color:var(--sub);text-align:center;padding:4px 0}
+.cal-g .w.sun{color:#B3261E}.cal-g .w.sat{color:#1D4ED8}
+.cal-g button{position:relative;aspect-ratio:1/1;border:0;background:transparent;border-radius:10px;font:inherit;font-size:14.5px;cursor:pointer;color:var(--ink)}
+.cal-g button:hover:not(:disabled){background:var(--soft)}
+.cal-g button.hot:after{content:"";position:absolute;left:50%;bottom:5px;width:5px;height:5px;margin-left:-2.5px;border-radius:50%;background:var(--yellow)}
+.cal-g button.hol{color:#B3261E}
+.cal-g button:disabled{color:#C9C4C1;cursor:not-allowed;text-decoration:line-through}
+.cal-g button.full{background:repeating-linear-gradient(135deg,#F3EEEC,#F3EEEC 4px,#fff 4px,#fff 8px)}
+.cal-g button.sel{background:var(--pine);color:var(--cream);font-weight:700}
+.cal-g button.sel:after{display:none}
+.cal-g button.sel:hover{background:var(--pine)!important;color:var(--cream)}
+.cal-leg{display:flex;flex-wrap:wrap;gap:14px;margin-top:10px;font-size:12.5px;color:var(--sub)}
+.cal-leg i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:5px;vertical-align:-1px}
+.picked{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.picked span{background:var(--pine);color:var(--cream);border-radius:999px;padding:6px 8px 6px 13px;font-size:14px;display:inline-flex;gap:8px;align-items:center}
+.picked button{border:0;background:rgba(255,253,252,.2);color:var(--cream);width:22px;height:22px;border-radius:50%;cursor:pointer;font-size:13px;line-height:1}
+.hp{position:absolute!important;left:-9999px!important;width:1px;height:1px;overflow:hidden}
+
+.hero-tag{color:var(--pine)}
+.hdr.solid .hdr-tag{color:var(--pine);border-color:var(--pine)}
+</style>
+</head>
+<body>
+
+<header class="hdr" id="hdr">
+  <a href="https://tsb.wine/" aria-label="TAP SHOP BAR 首页" style="display:flex;align-items:center;gap:12px;text-decoration:none"><img class="logo" src="../assets/tsb_wordmark_h.png" alt="TAP SHOP BAR"><span class="hdr-tag">包场咨询</span></a>
+  <nav>
+    <span class="lang" id="lang"><a href="../" data-l="ko">KO</a><a href="../en/" data-l="en">EN</a><a href="../ja/" data-l="ja">日本語</a><a href="../zh/" data-l="zh">中文</a></span>
+    <a href="#spaces">场地</a>
+    <a href="#packages">套餐</a>
+    <a href="#process">预订流程</a>
+    <a href="#policy">取消与退款</a>
+    <a href="#faq">FAQ</a>
+    <a class="cta" href="#inquiry">立即咨询</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <img src="../assets/loc_cheonggye.jpg" alt="TAP SHOP BAR 清溪三一大厦店全景">
+  <div class="wrap">
+    <div class="eyebrow">Winter in Wine · Private Party &amp; Events</div>
+    <div class="hero-tag">TAP SHOP BAR 包场 · 团体预订咨询</div>
+    <h1>以美酒相伴的<br>专属派对。</h1>
+    <p>婚礼后派对、生日、公司聚会皆可承办。可整场包下TAP SHOP BAR，也可只订包间。 <b>留下日期和人数，我们将在24小时内为您发送报价。</b></p>
+    <div class="row">
+      <a class="btn btn-wine" href="#inquiry">立即咨询 →</a>
+      <a class="btn btn-ghost" href="#packages">查看套餐</a>
+      <span class="note">每人55,000韩元起 · 3小时 · 含增值税</span>
+    </div>
+  </div>
+</section>
+
+<div class="stats">
+  <div class="wrap grid">
+    <div><b>64款</b><span>酒头现打的葡萄酒</span></div>
+    <div><b>5家门店</b><span>清溪 · 西汝矣岛 · 上岩 · 麻谷 · 东大门</span></div>
+    <div><b>24小时</b><span>内发送详细报价</span></div>
+    <div><b>专属经理</b><span>从咨询到活动当天</span></div>
+  </div>
+</div>
+
+<section class="xmas" id="xmas">
+  <div class="wrap">
+    <div>
+      <div class="ribbon"><span class="badge">12月预订现已开放</span><i></i></div>
+      <h2>12月年末派对，<br>就在TAP SHOP BAR。</h2>
+      <p>圣诞派对、年终聚会、团队年末聚餐。12月周五、周六晚间很快约满，请先锁定日期。</p>
+      <a class="btn btn-x" href="#inquiry" data-xmas>先锁定年末日期 →</a>
+    </div>
+    <div class="pts">
+      <div class="pt"><b>圣诞 · 年末派对</b><span>以起泡酒迎宾和酒头葡萄酒开启的夜晚</span></div>
+      <div class="pt"><b>公司年终聚会 · 团队聚餐</b><span>可开具税务发票 · 支持公司卡支付</span></div>
+      <div class="pt"><b>西汝矣岛3间包间 · 预计11.09开业</b><span>非常适合汝矣岛上班族年末聚会的独立包间</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="occasions">
+  <div class="wrap reveal">
+    <div class="eyebrow" style="color:var(--rose)">Occasions</div>
+    <h2 style="margin:12px 0 14px">无论什么日子，都从一杯葡萄酒开始。</h2>
+    <p class="lead">从站立式酒会到围坐晚宴，我们根据活动性质与您一同规划场地、菜单和动线。</p>
+    <div class="occ">
+      <div class="c"><div><i>WEDDING</i><h3>婚礼后派对</h3><p>仪式后与亲近宾客从容相聚，也可承办小型婚宴。</p></div></div>
+      <div class="c"><div><i>CELEBRATION</i><h3>生日 · 纪念日</h3><p>免费自带蛋糕，求婚、新娘派对也欢迎。</p></div></div>
+      <div class="c"><div><i>COMPANY</i><h3>公司聚会 · 年终聚会</h3><p>团队聚餐、年终聚会、工作坊后的小聚。可开具税务发票。</p></div></div>
+      <div class="c"><div><i>BRAND</i><h3>品牌活动 · 品鉴会</h3><p>新品发布派对、客户邀请会、葡萄酒课程与品鉴。</p></div></div>
+      <div class="c"><div><i>GATHERING</i><h3>同学会 · 家庭聚会</h3><p>久别重逢，在安静的包间里畅聊。</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="spaces" id="spaces">
+  <div class="wrap reveal">
+    <div class="eyebrow" style="color:var(--rose)">Spaces</div>
+    <h2 style="margin:12px 0 14px">契合人数与氛围的空间。</h2>
+    <p class="lead">大型派对可整场包场，小型聚会可选包间。告诉我们人数，我们为您推荐最合适的门店。</p>
+    <div class="sp-grid">
+      <div class="sp big"><img src="../assets/loc_cheonggye.jpg" alt="清溪三一大厦店" loading="lazy">
+        <div class="t"><span class="badge">大型派对推荐</span><h3>清溪 · 三一大厦店</h3><p>围绕酒头吧台而坐的环形大厅，紧邻清溪川，最适合周末午后整场包场。</p>
+        <div class="tags"><span>整场包场</span><span>站立 · 围坐</span><span>婚礼后派对</span><span>企业活动</span></div></div></div>
+      <div class="sp soon"><div class="mark">OPENING 11.09</div>
+        <div class="t"><span class="badge">NEW</span><h3>西汝矣岛 · Paragon D-Arcade</h3><p>地下2层，3间独立包间。预计11月9日正式开业，周日休息。</p>
+        <div class="tags"><span>3间包间</span><span>局部包场 · 整场包场</span><span>汝矣岛上班族聚会</span></div></div></div>
+      <div class="sp"><img src="../assets/loc_hall.jpg" alt="TAP SHOP BAR大厅" loading="lazy">
+        <div class="t"><h3>大厅 · 局部包场</h3><p>与散客共享空间的半私密形式。各门店可用区域不同，咨询时为您详细介绍。</p>
+        <div class="tags"><span>局部包场</span><span>按门店咨询</span></div></div></div>
+    </div>
+    <div class="sp-row">
+      <div class="sp"><img src="../assets/loc_sangam.jpg" alt="上岩店" loading="lazy"><div class="t"><h3>上岩 · DMC</h3><p>位于广播传媒园区中心，非常适合公司聚会。</p></div></div>
+      <div class="sp"><img src="../assets/loc_magok.jpg" alt="麻谷店" loading="lazy"><div class="t"><h3>麻谷 · VL Le West</h3><p>玻璃墙白色沙发包间，可容纳4–8人。</p></div></div>
+      <div class="sp"><img src="../assets/loc_dongdaemun.jpg" alt="东大门Doota店" loading="lazy"><div class="t"><h3>东大门 · Doota</h3><p>位于Doota商场内，6–8人包间。购物之后，来上一杯。</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="packages">
+  <div class="wrap reveal">
+    <div class="eyebrow" style="color:var(--rose)">Packages</div>
+    <h2 style="margin:12px 0 14px">三款简单易选的套餐。</h2>
+    <p class="lead">所有套餐均以每人3小时计价，含增值税。菜单与葡萄酒可根据活动共同调整。</p>
+    <div class="pk-grid">
+      <div class="pk"><div class="nm">LIGHT</div><div class="pr">5.5<small>万韩元</small></div><div class="per">每人 · 3小时</div>
+        <ul><li>4款手指小食</li><li>酒头葡萄酒2杯</li><li>饮品 · 咖啡</li><li>推荐用于站立式酒会</li></ul>
+        <div class="pick"><button class="btn" data-pick="A">咨询此套餐</button></div></div>
+      <div class="pk rec"><div class="nm">PARTY <span class="badge">推荐</span></div><div class="pr">7.5<small>万韩元</small></div><div class="per">每人 · 3小时</div>
+        <ul><li>6款手指小食</li><li>酒头葡萄酒3小时畅饮</li><li>饮品 · 咖啡</li><li>推荐用于婚礼后派对</li></ul>
+        <div class="pick"><button class="btn" data-pick="B">咨询此套餐</button></div></div>
+      <div class="pk"><div class="nm">PREMIUM</div><div class="pr">9.5<small>万韩元</small></div><div class="per">每人 · 3小时</div>
+        <ul><li>8款手指小食 + 1道主菜</li><li>起泡酒迎宾饮品</li><li>酒头葡萄酒3小时畅饮</li><li>围坐晚宴 · VIP活动</li></ul>
+        <div class="pick"><button class="btn" data-pick="C">咨询此套餐</button></div></div>
+      <div class="pk"><div class="nm">CUSTOM</div><div class="pr" style="font-size:30px;margin-top:26px">定制报价</div><div class="per">按预算与人数定制</div>
+        <ul><li>套餐晚宴、生蚝吧</li><li>瓶装葡萄酒 · 香槟塔</li><li>品牌活动、品鉴会</li><li>按预算灵活搭配</li></ul>
+        <div class="pick"><button class="btn" data-pick="D">咨询定制报价</button></div></div>
+    </div>
+    <div class="incl"><span><b>所有套餐均包含</b></span><span>专属经理</span><span>基础餐桌布置 · 服务</span><span>免费自带鲜花、拍照区布置和蛋糕</span><span>麦克风 · 背景音乐</span></div>
+  </div>
+</section>
+
+<section class="process" id="process">
+  <div class="wrap reveal">
+    <div class="eyebrow" style="color:var(--yellow)">How it works</div>
+    <h2 style="margin:12px 0 14px">从咨询到活动当天，只需五步。</h2>
+    <p class="lead">繁琐的事交给我们，您只需确定日期和人数。</p>
+    <div class="steps">
+      <div class="s"><div class="n">01</div><h3>提交咨询</h3><p>在下方表单填写日期、人数和期望安排，只需2分钟。</p></div>
+      <div class="s"><div class="n">02</div><h3>审核后24小时内报价</h3><p>我们确认日期与场地后，仅在可承办时通过邮件发送详细报价。</p></div>
+      <div class="s"><div class="n">03</div><h3>审核 · 付定金确认</h3><p>TAP SHOP BAR审核通过日期后，请在3天内支付定金（总额的20%）。确认到账后即预订成功。</p></div>
+      <div class="s"><div class="n">04</div><h3>菜单 · 布置协调</h3><p>活动前2–4周，与您一同确定菜单、葡萄酒、布置与动线。</p></div>
+      <div class="s"><div class="n">05</div><h3>活动当天</h3><p>专属经理全程陪同，尾款于当天结清。</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="policy" id="policy">
+  <div class="wrap reveal">
+    <div class="eyebrow" style="color:var(--wine)">Cancellation &amp; Refund</div>
+    <h2 style="margin:12px 0 14px">取消与退款政策。</h2>
+    <p class="lead">预订前请务必确认。支付定金即视为同意以下条款。</p>
+    <div class="pol-bar">
+      <div class="p1"><div class="when">活动前30天及以上</div><div class="pct">100%退款</div><div class="what">全额退还定金。</div></div>
+      <div class="p2"><div class="when">活动前29–14天</div><div class="pct">50%退款</div><div class="what">退还一半定金。</div></div>
+      <div class="p3"><div class="when">活动前13天至当天</div><div class="pct">不予退款</div><div class="what">定金不予退还。</div></div>
+    </div>
+    <ul class="pol-list">
+      <li><b>定金为总额的20%</b>，确认到账后预订即生效。报价确认后3天内未付款，暂定预订将自动取消。</li>
+      <li><b>活动前30天前可免费改期1次</b>，此后的变更按取消政策处理。</li>
+      <li><b>最终人数请于活动前7天</b> 告知我们。此后如人数减少，将按确认人数结算。</li>
+      <li><b>尾款于活动当天</b> 通过刷卡或银行转账结清。可开具税务发票和现金收据。</li>
+      <li><b>如因TAP SHOP BAR方面原因无法承办</b> ，我们会优先提供同等门店或日期；如您不接受，将全额退还定金。</li>
+      <li><b>如遇自然灾害等不可抗力</b>，我们将优先协助改期；如无法改期，将全额退款。</li>
+    </ul>
+    <p class="pol-note">违约金不超过定金（总额的20%）。期限以活动日为准，取消以邮件受理日期为准。我们将在活动前30天、14天、7天和1天发送提醒邮件。</p>
+  </div>
+</section>
+
+<section id="gallery">
+  <div class="wrap reveal">
+    <div class="eyebrow" style="color:var(--rose)">Food &amp; Wine</div>
+    <h2 style="margin:12px 0 14px">酒头现打，按杯畅饮。</h2>
+    <p class="lead">酒头葡萄酒与招牌菜品，按派对规模为您准备。</p>
+    <div class="gal">
+      <figure class="g1"><img src="../assets/menu_oyster.jpg" alt="生蚝" loading="lazy"></figure>
+      <figure class="g2"><img src="../assets/a26_woman_rose.jpg" alt="佐以葡萄酒" loading="lazy"></figure>
+      <figure class="g3"><img src="../assets/app_tap.jpg" alt="酒头葡萄酒" loading="lazy"></figure>
+      <figure class="g4"><img src="../assets/menu_burrata.jpg" alt="布拉塔奶酪" loading="lazy"></figure>
+      <figure class="g5"><img src="../assets/menu_steak.jpg" alt="牛排" loading="lazy"></figure>
+      <figure class="g6"><img src="../assets/app_cellar.jpg" alt="酒窖" loading="lazy"></figure>
+      <figure class="g7"><img src="../assets/a26_men_B.jpg" alt="举杯共饮" loading="lazy" style="object-position:center 30%"></figure>
+      <figure class="g8"><img src="../assets/menu_pasta.jpg" alt="意面" loading="lazy"></figure>
+    </div>
+  </div>
+</section>
+
+<section class="inq" id="inquiry">
+  <div class="wrap">
+    <div class="eyebrow" style="color:var(--rose)">Rental Inquiry · 包场咨询</div>
+    <h2 style="margin:12px 0 14px">包场咨询。</h2>
+    <p class="lead">填写越详细，报价越准确。不确定的项目可以留空。 <span class="req">*</span> 为必填项。</p>
+    <div class="appr">
+      <div><div class="k">01 · 审核制</div><b>所有包场均需审核通过后进行</b><span>我们确认场地和运营情况后，仅对可预订日期提供报价。提交咨询不等于预订成功。</span></div>
+      <div><div class="k">02 · 定金确认</div><b>支付20%定金即确认</b><span>报价确认后3天内付款，日期即刻确认。在此之前为暂定预订。</span></div>
+      <div><div class="k">03 · 名额紧张</div><b>年末、周末和节假日很快约满</b><span>12月、周末晚间及公众假期会提前约满。如有心仪日期，请尽早咨询。</span></div>
+    </div>
+    <div class="inq-grid">
+      <div>
+      <form class="card" id="f" novalidate>
+        <div class="blk">
+          <h3><span class="num">1</span>是什么活动？</h3>
+          <div class="fld"><div class="lb">活动类型</div>
+            <div class="chips" data-name="행사 종류" data-single>
+              <button type="button" class="chip" data-v="크리스마스 · 연말 파티">圣诞 · 年末派对</button><button type="button" class="chip" data-v="웨딩 애프터파티">婚礼后派对</button><button type="button" class="chip" data-v="스몰 웨딩 · 피로연">小型婚礼 · 婚宴</button><button type="button" class="chip" data-v="생일 · 기념일">生日 · 纪念日</button><button type="button" class="chip" data-v="프러포즈 · 브라이덜 샤워">求婚 · 新娘派对</button><button type="button" class="chip" data-v="회사 모임 · 회식">公司聚会 · 聚餐</button><button type="button" class="chip" data-v="회사 송년회">公司年终聚会</button><button type="button" class="chip" data-v="브랜드 행사 · 런칭">品牌活动 · 发布会</button><button type="button" class="chip" data-v="와인 클래스 · 시음회">葡萄酒课程 · 品鉴会</button><button type="button" class="chip" data-v="동창 · 가족 모임">同学会 · 家庭聚会</button><button type="button" class="chip" data-v="기타">其他</button>
+            </div></div>
+          <div class="fld"><label for="desc">请再介绍一下您的活动 <span class="hint">选填</span></label>
+            <input type="text" id="desc" data-name="행사 설명" placeholder="例）7月婚礼后与朋友的午后派对，安排献唱和祝酒词"></div>
+        </div>
+
+        <div class="blk">
+          <h3><span class="num">2</span>活动在什么时候？</h3>
+          <div class="fld"><div class="lb">日期状态</div>
+            <div class="chips" data-name="날짜 유연성" data-single>
+              <button type="button" class="chip" data-v="날짜 확정">日期已确定</button><button type="button" class="chip" data-v="후보 날짜 중 선택">从备选日期中选择</button><button type="button" class="chip" data-v="월 · 요일만 정해짐">仅确定月份 · 星期</button><button type="button" class="chip" data-v="아직 미정">尚未确定</button>
+            </div></div>
+          <div class="fld"><div class="lb">期望日期 <span class="hint">最多3个 · 未定可留空 · 先选门店可查看已约满日期</span></div>
+            <div class="cal" id="cal"><div class="cal-h"><button type="button" id="calPrev" aria-label="上个月">‹</button><b id="calTitle"></b><button type="button" id="calNext" aria-label="下个月">›</button></div>
+              <div class="cal-g" id="calGrid"></div>
+              <div class="cal-leg"><span><i style="background:var(--pine)"></i>已选</span><span><i style="background:var(--yellow);border-radius:50%"></i>易约满（年末 · 周末 · 节假日）</span><span><i style="background:repeating-linear-gradient(135deg,#E5DFDC,#E5DFDC 2px,#fff 2px,#fff 4px)"></i>已约满</span></div></div>
+            <div class="picked" id="picked"></div></div>
+          <div class="fld"><div class="lb">开始时间</div>
+            <div class="chips" data-name="시작 시간" data-single>
+              <button type="button" class="chip" data-v="점심 11~14시">午间 <small>11–14点</small></button><button type="button" class="chip" data-v="오후 14~17시">下午 <small>14–17点</small></button><button type="button" class="chip" data-v="저녁 18~21시">晚上 <small>18–21点</small></button><button type="button" class="chip" data-v="늦은 저녁 21시~">深夜 <small>21点起</small></button><button type="button" class="chip" data-v="상담 후 결정">咨询后决定</button>
+            </div></div>
+          <div class="fld"><div class="lb">使用时长</div>
+            <div class="chips" data-name="이용 시간" data-single>
+              <button type="button" class="chip" data-v="2시간">2小时</button><button type="button" class="chip on" data-v="3시간 기본">3小时 <small>标准</small></button><button type="button" class="chip" data-v="4시간">4小时</button><button type="button" class="chip" data-v="5시간 이상">5小时以上</button>
+            </div></div>
+        </div>
+
+        <div class="blk">
+          <h3><span class="num">3</span>在哪里，有多少人？</h3>
+          <div class="fld"><label for="guests">预计人数 <span class="req">*</span></label>
+            <div class="stepper"><button type="button" data-g="-5">−</button><input type="number" id="guests" min="4" max="200" value="30" data-name="예상 인원"><button type="button" data-g="5">+</button><span class="hint">人</span></div>
+            <input type="range" id="grange" min="4" max="120" value="30" aria-label="预计人数滑块">
+            <div class="err">请填写人数。</div></div>
+          <div class="fld"><div class="lb">期望门店</div>
+            <div class="chips" data-name="희망 지점" data-single>
+              <button type="button" class="chip" data-v="청계 · 삼일빌딩">清溪 · 三一大厦</button><button type="button" class="chip" data-v="서여의도 · 파라곤">西汝矣岛 · Paragon</button><button type="button" class="chip" data-v="상암">上岩</button><button type="button" class="chip" data-v="마곡">麻谷</button><button type="button" class="chip" data-v="동대문 · 두타">东大门 · Doota</button><button type="button" class="chip" data-v="추천해 주세요">请为我推荐</button>
+            </div></div>
+          <div class="fld"><div class="lb">包场形式</div>
+            <div class="chips" data-name="대관 형태" data-single>
+              <button type="button" class="chip" data-v="전체 대관">整场包场</button><button type="button" class="chip" data-v="부분 대관">局部包场</button><button type="button" class="chip" data-v="룸">包间</button><button type="button" class="chip" data-v="추천해 주세요">请为我推荐</button>
+            </div></div>
+          <div class="fld"><div class="lb">座位形式</div>
+            <div class="chips" data-name="좌석 형태" data-single>
+              <button type="button" class="chip" data-v="스탠딩 리셉션">站立式酒会</button><button type="button" class="chip" data-v="착석">围坐</button><button type="button" class="chip" data-v="스탠딩 + 착석 혼합">站立 + 围坐混合</button><button type="button" class="chip" data-v="추천해 주세요">请为我推荐</button>
+            </div></div>
+        </div>
+
+        <div class="blk">
+          <h3><span class="num">4</span>套餐与选项</h3>
+          <div class="fld"><div class="lb">套餐</div>
+            <div class="pkopts" id="pkopts">
+              <button type="button" class="pko" data-p="A"><b>LIGHT · 每人55,000韩元</b><span>4款手指小食 + 酒头葡萄酒2杯 + 饮品</span></button>
+              <button type="button" class="pko on" data-p="B"><b>PARTY · 每人75,000韩元</b><span>6款手指小食 + 酒头葡萄酒3小时畅饮 + 饮品</span></button>
+              <button type="button" class="pko" data-p="C"><b>PREMIUM · 每人95,000韩元</b><span>8款手指小食 + 主菜 + 起泡酒迎宾 + 酒头葡萄酒畅饮</span></button>
+              <button type="button" class="pko" data-p="D"><b>CUSTOM · 定制报价</b><span>根据预算与安排单独设计</span></button>
+            </div></div>
+          <div class="fld"><div class="lb">加点餐食 <span class="hint">可多选</span></div>
+            <div class="chips" data-name="음식 추가 옵션">
+              <button type="button" class="chip" data-v="오이스터 플래터">生蚝拼盘</button><button type="button" class="chip" data-v="부라타 · 샤퀴테리">布拉塔 · 熟食冷肉</button><button type="button" class="chip" data-v="스테이크 슬라이스">牛排切片</button><button type="button" class="chip" data-v="파스타">意面</button><button type="button" class="chip" data-v="치즈 보드">奶酪拼盘</button><button type="button" class="chip" data-v="디저트 · 초콜릿">甜点 · 巧克力</button><button type="button" class="chip" data-v="케이크 반입">自带蛋糕</button><button type="button" class="chip" data-v="비건 · 채식 메뉴">纯素 · 素食菜单</button>
+            </div></div>
+          <div class="fld"><div class="lb">饮品 · 葡萄酒</div>
+            <div class="chips" data-name="음료·와인 옵션">
+              <button type="button" class="chip" data-v="스파클링 웰컴 드링크">起泡酒迎宾饮品</button><button type="button" class="chip" data-v="샴페인 타워">香槟塔</button><button type="button" class="chip" data-v="보틀 와인 추가">加点瓶装葡萄酒</button><button type="button" class="chip" data-v="하객 와인 선물">宾客葡萄酒伴手礼</button><button type="button" class="chip" data-v="논알콜 · 제로 와인">无醇 · 零度葡萄酒</button><button type="button" class="chip" data-v="커피 · 아메리카노">咖啡 · 美式</button><button type="button" class="chip" data-v="외부 와인 반입">自带葡萄酒</button>
+            </div></div>
+          <div class="fld"><div class="lb">布置 · 设备</div>
+            <div class="chips" data-name="연출·장비 옵션">
+              <button type="button" class="chip" data-v="꽃 장식">鲜花装饰</button><button type="button" class="chip" data-v="포토존">拍照区</button><button type="button" class="chip" data-v="웰컴 보드 · 사인">迎宾牌 · 指示牌</button><button type="button" class="chip" data-v="마이크 · 음향">麦克风 · 音响</button><button type="button" class="chip" data-v="BGM 플레이리스트">背景音乐歌单</button><button type="button" class="chip" data-v="빔프로젝터 · 영상">投影仪 · 视频</button><button type="button" class="chip" data-v="맞춤 메뉴판 인쇄">定制菜单印刷</button>
+            </div></div>
+          <div class="fld"><div class="lb">服务</div>
+            <div class="chips" data-name="서비스 옵션">
+              <button type="button" class="chip" data-v="사진 · 영상 작가 연결">对接摄影 · 摄像师</button><button type="button" class="chip" data-v="꽃 · 데코 업체 연결">对接花艺 · 装饰商</button><button type="button" class="chip" data-v="사회자 · 공연 연결">对接主持 · 表演</button><button type="button" class="chip" data-v="시간 연장 가능성">可能需要延时</button><button type="button" class="chip" data-v="주차 안내 필요">需要停车指引</button>
+            </div></div>
+          <div class="fld"><label for="diet">饮食限制 · 过敏 <span class="hint">选填</span></label>
+            <input type="text" id="diet" data-name="식이 제한·알레르기" placeholder="例）素食3人，甲壳类过敏1人"></div>
+        </div>
+
+        <div class="blk">
+          <h3><span class="num">5</span>预算与付款</h3>
+          <div class="fld"><div class="lb">总预算</div>
+            <div class="chips" data-name="예산" data-single>
+              <button type="button" class="chip" data-v="200만원 이하">200万韩元以下</button><button type="button" class="chip" data-v="200~400만원">200万–400万韩元</button><button type="button" class="chip" data-v="400~600만원">400万–600万韩元</button><button type="button" class="chip" data-v="600~1,000만원">600万–1,000万韩元</button><button type="button" class="chip" data-v="1,000만원 이상">1,000万韩元以上</button><button type="button" class="chip" data-v="상담 후 결정">咨询后决定</button>
+            </div></div>
+          <div class="fld"><div class="lb">付款方式 · 票据</div>
+            <div class="chips" data-name="결제·증빙">
+              <button type="button" class="chip" data-v="개인 카드">个人信用卡</button><button type="button" class="chip" data-v="법인 카드">公司卡</button><button type="button" class="chip" data-v="계좌이체">银行转账</button><button type="button" class="chip" data-v="세금계산서">税务发票</button><button type="button" class="chip" data-v="현금영수증">现金收据</button>
+            </div></div>
+        </div>
+
+        <div class="blk">
+          <h3><span class="num">6</span>联系方式</h3>
+          <div class="two">
+            <div class="fld" id="fName"><label for="name">姓名 <span class="req">*</span></label><input type="text" id="name" data-name="이름" autocomplete="name" placeholder="李明"><div class="err">请填写姓名。</div></div>
+            <div class="fld" id="fEmail"><label for="email">电子邮箱 <span class="req">*</span></label><input type="email" id="email" data-name="이메일" autocomplete="email" placeholder="name@example.com"><div class="err">请准确填写接收报价的邮箱。</div></div>
+          </div>
+          <div class="two">
+            <div class="fld"><label for="tel">电话号码 <span class="hint">选填</span></label><input type="tel" id="tel" data-name="전화번호" autocomplete="tel" placeholder="010-0000-0000"></div>
+            <div class="fld"><label for="ig">Instagram账号 <span class="hint">选填</span></label><input type="text" id="ig" data-name="인스타그램 ID" placeholder="@"></div>
+          </div>
+          <div class="fld"><div class="lb">偏好的联系方式</div>
+            <div class="chips" data-name="연락 선호">
+              <button type="button" class="chip on" data-v="이메일">电子邮箱</button><button type="button" class="chip" data-v="전화">电话</button><button type="button" class="chip" data-v="문자">短信</button><button type="button" class="chip" data-v="인스타그램 DM">Instagram私信</button>
+            </div></div>
+          <div class="fld"><div class="lb">您是如何知道TAP SHOP BAR的？</div>
+            <div class="chips" data-name="알게 된 경로" data-single>
+              <button type="button" class="chip" data-v="인스타그램">Instagram</button><button type="button" class="chip" data-v="네이버">Naver</button><button type="button" class="chip" data-v="매장 방문">到店</button><button type="button" class="chip" data-v="지인 추천">朋友推荐</button><button type="button" class="chip" data-v="웨딩 플랫폼 · 카페">婚礼平台 · 社群</button><button type="button" class="chip" data-v="기타">其他</button>
+            </div></div>
+          <div class="fld"><label for="note">需求 · 疑问 <span class="hint">您的问题也会收录到FAQ中</span></label>
+            <textarea id="note" data-name="요청사항·질문" placeholder="例）新人入场时可以播放音乐吗？婴儿车能进吗？"></textarea></div>
+          <div class="fld" id="fAgree">
+            <label class="chk"><input type="checkbox" id="agree"> <span><b>[必填]</b> 我同意为提供报价而收集姓名、邮箱、电话号码及活动信息，并在咨询结束后保存1年。</span></label>
+            <div class="err">请同意所有必填项。</div>
+            <label class="chk"><input type="checkbox" id="agree2"> <span><b>[必填]</b> 我已了解包场需经审核后进行，并在支付定金（20%）后确认，且已阅读 <a href="#policy">取消与退款政策</a>。</span></label>
+            <label class="chk"><input type="checkbox" id="mkt"> <span>[选填] 我愿意通过邮件接收TAP SHOP BAR的活动及季节资讯。</span></label>
+          </div>
+          <div class="hp" aria-hidden="true"><label>Website <input type="text" id="website" tabindex="-1" autocomplete="off"></label></div>
+          <button type="submit" class="btn btn-wine submit" id="sendBtn">提交包场咨询</button>
+        </div>
+      </form>
+      <div class="done" id="done">
+        <span class="badge">提交成功</span>
+        <h3>您的包场咨询已成功提交。</h3>
+        <p style="color:#444;margin:0">确认邮件已发送至您填写的邮箱。我们确认日期和场地后，将在 <b>24小时内</b> 为您发送报价。</p>
+        <div class="sumtotal" id="doneTotal"></div>
+        <div style="color:var(--sub);font-size:14px;margin-bottom:24px" id="doneCalc"></div>
+        <ol>
+          <li><b>查收报价</b> · 请查看邮箱（包括垃圾邮件）。</li>
+          <li><b>审核 · 定金</b> · 报价确认后3天内支付定金（总额的20%）即可确认预订。</li>
+          <li><b>菜单 · 布置协调</b> · 活动前2–4周与您一同确定。</li>
+        </ol>
+        <a class="btn btn-wine" href="#faq" style="margin-top:10px">查看常见问题</a>
+      </div>
+      </div>
+
+      <aside class="est" id="est">
+        <div class="k">ESTIMATE · 预估金额</div>
+        <div class="total" id="estTotal">2,250,000韩元</div>
+        <div class="calc" id="estCalc">每人75,000韩元 × 30人</div>
+        <ul>
+          <li><span>活动</span><span id="eType">-</span></li>
+          <li><span>门店</span><span id="eBranch">-</span></li>
+          <li><span>日期</span><span id="eDate">-</span></li>
+          <li><span>时长</span><span id="eTime">3小时</span></li>
+          <li><span>附加选项</span><span id="eOpt">无</span></li>
+        </ul>
+        <div class="flag" id="eFlag"></div>
+        <div class="fine">含增值税、按3小时计算的参考金额。最终报价可能因附加选项、延时及周末最低消费而有所不同。</div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <div class="faq-top"><div><div class="eyebrow" style="color:var(--rose)">FAQ</div><h2 style="margin:12px 0 0">常见问题。</h2></div>
+      <div style="color:var(--sub);font-size:14px" id="faqUpd"></div></div>
+    <div class="faq-tools"><div class="chips" id="faqCats"></div><input type="text" id="faqQ" placeholder="搜索问题（例：停车、定金）"></div>
+    <div class="faq-list" id="faqList"></div>
+    <div class="faq-more"><div><b>没有找到想要的答案？</b><br><span style="color:var(--sub);font-size:14.5px">留下您的问题，我们会为您解答，常见问题也会持续补充到这里。</span></div>
+      <a class="btn btn-wine" href="#inquiry" onclick="setTimeout(()=>document.getElementById('note').focus(),600)">提交问题</a></div>
+  </div>
+</section>
+
+<div class="mbar" id="mbar"><div><small>预估金额 · 仅供参考</small><b id="mTotal">约2,250,000韩元</b></div><a href="#sendBtn">包场咨询</a></div>
+
+<footer>
+  <div class="wrap">
+    <img class="logo" src="../assets/tsb_wordmark_h.png" alt="TAP SHOP BAR">
+    <div class="slogan">wine is second americano</div>
+    <div>包场咨询 <a href="mailto:hello@tsb.wine">hello@tsb.wine</a> · <a href="https://tsb.wine/">tsb.wine</a> · <a href="https://www.instagram.com/tap.shop.bar/">@tap.shop.bar</a></div>
+    <div style="margin-top:14px;opacity:.75">TAP SHOP BAR股份有限公司 · 营业执照号 235-87-02963 · 通信销售业申报号 2024-首尔江南-02876<br>首尔市钟路区清溪川路85号 三一大厦 地下1层</div>
+  </div>
+</footer>
+
+<script>
+const LANG = (document.documentElement.getAttribute('lang') || 'ko').slice(0,2);
+const FORM_ACTION = 'https://docs.google.com/forms/d/e/1FAIpQLSdTfNy_0vSpc9JvXLkM8YOhCgdUtRDTDOVuGsw1XwKyR_xFgQ/formResponse';
+const API = 'https://script.google.com/macros/s/AKfycbymH-sSHwMhwbDAPR03wYfIvW25j-ZTxm2i66geBy09zZDuiUPz2fqN6rx_JMKzL1l1lA/exec';
+const ENTRY = {"이름": "entry.125997193", "이메일": "entry.774004879", "전화번호": "entry.107204065", "연락 선호": "entry.602585264", "인스타그램 ID": "entry.554884492", "행사 종류": "entry.1393676366", "행사 설명": "entry.132716252", "희망 지점": "entry.788802517", "대관 형태": "entry.1614396877", "좌석 형태": "entry.1093555371", "희망 날짜 1": "entry.260214201", "희망 날짜 2": "entry.250023228", "희망 날짜 3": "entry.116463333", "날짜 유연성": "entry.2139562266", "시작 시간": "entry.1105220048", "이용 시간": "entry.752168502", "예상 인원": "entry.552219145", "패키지": "entry.1335322666", "음식 추가 옵션": "entry.1729209222", "음료·와인 옵션": "entry.57804322", "연출·장비 옵션": "entry.574372", "서비스 옵션": "entry.2108581224", "식이 제한·알레르기": "entry.989294524", "예산": "entry.738036364", "결제·증빙": "entry.2030953310", "알게 된 경로": "entry.646531884", "요청사항·질문": "entry.1441841197", "예상 금액": "entry.911346277", "개인정보 동의": "entry.491223383", "마케팅 수신 동의": "entry.848007638", "유입 경로": "entry.23393554", "언어": "entry.990191562", "봇체크": "entry.1490221497"};
+const PK = {A:{n:'LIGHT',p:5.5},B:{n:'PARTY',p:7.5},C:{n:'PREMIUM',p:9.5},D:{n:'CUSTOM',p:0}};
+const L = {
+  ko:{custom:'맞춤 견적', customCalc:g=>`${g}명 · 예산과 구성에 맞춰 설계`, needG:'인원을 알려주세요', calc:(n,p,g)=>`${n} 1인 ${p}만원 × ${g}명`,
+      opt:n=>`${n}개 · 견적서에서 안내`, none:'없음', wk:['일','월','화','수','목','금','토'], month:(y,m)=>`${y}년 ${m}월`,
+      fWeekend:'주말 전체 대관은 지점별 최소 이용 금액이 적용될 수 있어요.', fLong:'3시간 초과분은 시간 연장 금액이 더해져요.',
+      fSun:'서여의도는 일요일 휴무예요.', fRoom:'마곡·동대문 룸은 8인까지예요. 큰 모임은 다른 지점을 추천해 드려요.', fHot:'선택한 날짜에 연말·주말·공휴일이 있어요. 빠르게 마감되니 서둘러 주세요.',
+      max3:'날짜는 3개까지 고를 수 있어요.', sending:'보내는 중…', upd:'최종 업데이트 ', nofaq:'찾는 질문이 없어요. 아래에서 질문을 남겨 주세요.', all:'전체', ref:'참고 금액'},
+  en:{custom:'Custom quote', customCalc:g=>`${g} guests · tailored to your budget`, needG:'Tell us your guest count', calc:(n,p,g)=>`${n} ₩${(p*10000).toLocaleString('en-US')} × ${g} guests`,
+      opt:n=>`${n} selected · priced in your quote`, none:'None', wk:['Sun','Mon','Tue','Wed','Thu','Fri','Sat'], month:(y,m)=>new Date(y,m-1,1).toLocaleString('en-US',{month:'long',year:'numeric'}),
+      fWeekend:'Weekend full buyouts may have a minimum spend per location.', fLong:'Hours beyond 3 are charged as an extension.',
+      fSun:'Seoyeouido is closed on Sundays.', fRoom:'Magok and Dongdaemun rooms seat up to 8. We will suggest another location for larger groups.', fHot:'Your dates include year-end, weekend or holiday dates. These book out fast.',
+      max3:'You can pick up to 3 dates.', sending:'Sending…', upd:'Last updated ', nofaq:'No matching question. Leave your question below.', all:'All', ref:'estimate'},
+  ja:{custom:'個別見積もり', customCalc:g=>`${g}名 · ご予算に合わせてご提案`, needG:'人数を入力してください', calc:(n,p,g)=>`${n} 1名 ₩${(p*10000).toLocaleString('ja-JP')} × ${g}名`,
+      opt:n=>`${n}件 · お見積もりでご案内`, none:'なし', wk:['日','月','火','水','木','金','土'], month:(y,m)=>`${y}年${m}月`,
+      fWeekend:'週末の貸切は店舗ごとに最低利用金額がある場合があります。', fLong:'3時間を超える分は延長料金がかかります。',
+      fSun:'西汝矣島店は日曜定休です。', fRoom:'麻谷・東大門の個室は8名までです。大人数の場合は別の店舗をご提案します。', fHot:'年末・週末・祝日が含まれています。早めに埋まるのでお急ぎください。',
+      max3:'日付は3つまで選べます。', sending:'送信中…', upd:'最終更新 ', nofaq:'該当する質問がありません。下からご質問ください。', all:'すべて', ref:'参考金額'},
+  zh:{custom:'定制报价', customCalc:g=>`${g}人 · 按预算定制`, needG:'请填写人数', calc:(n,p,g)=>`${n} 每人 ₩${(p*10000).toLocaleString('zh-CN')} × ${g}人`,
+      opt:n=>`已选${n}项 · 报价中说明`, none:'无', wk:['日','一','二','三','四','五','六'], month:(y,m)=>`${y}年${m}月`,
+      fWeekend:'周末包场可能有各门店的最低消费。', fLong:'超过3小时的部分按延时计费。',
+      fSun:'西汝矣岛店周日休息。', fRoom:'麻谷、东大门包间最多8人。人数较多时我们会推荐其他门店。', fHot:'所选日期包含年末、周末或节假日，预订很快，请尽早咨询。',
+      max3:'最多可选择3个日期。', sending:'发送中…', upd:'最后更新 ', nofaq:'没有找到相关问题，请在下方留言。', all:'全部', ref:'参考金额'},
+}[LANG] || null;
+const T = L || {};
+let pkSel = 'B';
+const $ = s => document.querySelector(s), $$ = s => [...document.querySelectorAll(s)];
+const clean = el => el.textContent.replace(/\s+/g,' ').trim();
+const t0 = Date.now();
+
+// lang switch
+$$('#lang a').forEach(a => { if(a.dataset.l === LANG) a.classList.add('cur'); });
+
+// header
+const hdr = $('#hdr');
+const onScroll = () => hdr.classList.toggle('solid', window.scrollY > window.innerHeight*0.6);
+window.addEventListener('scroll', onScroll, {passive:true}); onScroll();
+const mbarIO = new IntersectionObserver(es => es.forEach(e => $('#mbar').classList.toggle('show', e.isIntersecting && $('#f').style.display!=='none')), {threshold:.05});
+mbarIO.observe($('#inquiry'));
+
+// reveal
+const io = new IntersectionObserver(es => es.forEach(e => { if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} }), {threshold:.12});
+$$('.reveal').forEach(el => io.observe(el));
+
+// chips
+$$('.chips[data-name]').forEach(g => {
+  g.addEventListener('click', e => {
+    const c = e.target.closest('.chip'); if(!c) return;
+    if(g.hasAttribute('data-single')){ const was = c.classList.contains('on'); g.querySelectorAll('.chip').forEach(x=>x.classList.remove('on')); if(!was) c.classList.add('on'); }
+    else c.classList.toggle('on');
+    if(g.dataset.name==='희망 지점' || g.dataset.name==='대관 형태') drawCal();
+    update();
+  });
+});
+const chipVal = name => { const g = document.querySelector(`.chips[data-name="${name}"]`); return g ? [...g.querySelectorAll('.chip.on')].map(c => c.dataset.v || clean(c)).join(', ') : ''; };
+const chipShow = name => { const g = document.querySelector(`.chips[data-name="${name}"]`); return g ? [...g.querySelectorAll('.chip.on')].map(c => clean(c).replace(/\s*\d.*$/,'')).join(', ') : ''; };
+$$('[data-xmas]').forEach(b => b.addEventListener('click', () => { const c = document.querySelector('.chips[data-name="행사 종류"] .chip[data-v^="크리스마스"]'); if(c && !c.classList.contains('on')) c.click(); }));
+
+// package
+function setPk(p){ pkSel = p; $$('.pko').forEach(b => b.classList.toggle('on', b.dataset.p===p)); update(); }
+$$('.pko').forEach(b => b.addEventListener('click', () => setPk(b.dataset.p)));
+$$('[data-pick]').forEach(b => b.addEventListener('click', () => { setPk(b.dataset.pick); $('#inquiry').scrollIntoView({behavior:'smooth'}); }));
+
+// guests
+const gIn = $('#guests'), gR = $('#grange');
+$$('[data-g]').forEach(b => b.addEventListener('click', () => { gIn.value = Math.max(4, Math.min(300, (+gIn.value||0) + (+b.dataset.g))); gR.value = Math.min(120,gIn.value); update(); }));
+gIn.addEventListener('input', () => { gR.value = Math.min(120, +gIn.value||4); update(); });
+gR.addEventListener('input', () => { gIn.value = gR.value; update(); });
+
+// ---------- calendar ----------
+const HOL = ['2026-12-25','2027-01-01','2027-02-06','2027-02-07','2027-02-08','2027-02-09','2027-03-01','2027-05-05','2027-05-13','2027-06-06','2027-08-15','2027-08-16','2027-09-14','2027-09-15','2027-09-16','2027-10-03','2027-10-04','2027-10-09','2027-10-11','2027-12-25'];
+let BLOCKED = {}; // {branch:{date:'full'|'partial'}}
+let picked = [];
+const pad = n => String(n).padStart(2,'0');
+const ymd = d => `${d.getFullYear()}-${pad(d.getMonth()+1)}-${pad(d.getDate())}`;
+const today = new Date(); today.setHours(0,0,0,0);
+const minD = new Date(today); minD.setDate(minD.getDate()+2);
+const maxD = new Date(today); maxD.setMonth(maxD.getMonth()+20);
+let view = new Date(today.getFullYear(), today.getMonth(), 1);
+const branchKey = () => (chipVal('희망 지점').split(' ')[0] || '');
+function dayState(d){
+  const k = ymd(d), br = branchKey(), full = /전체/.test(chipVal('대관 형태'));
+  if(d < minD || d > maxD) return 'off';
+  if(br === '서여의도' && d.getDay() === 0) return 'off';
+  const b = (BLOCKED[br] || {})[k];
+  if(b === 'full' || (b === 'partial' && full)) return 'full';
+  return '';
+}
+const isHot = d => d.getMonth()===11 || d.getDay()===5 || d.getDay()===6 || HOL.includes(ymd(d));
+function drawCal(){
+  const g = $('#calGrid'); if(!g) return;
+  $('#calTitle').textContent = T.month(view.getFullYear(), view.getMonth()+1);
+  let h = T.wk.map((w,i)=>`<div class="w${i===0?' sun':i===6?' sat':''}">${w}</div>`).join('');
+  const first = new Date(view), days = new Date(view.getFullYear(), view.getMonth()+1, 0).getDate();
+  for(let i=0;i<first.getDay();i++) h += '<div></div>';
+  for(let i=1;i<=days;i++){
+    const d = new Date(view.getFullYear(), view.getMonth(), i), k = ymd(d), st = dayState(d);
+    const cls = [st==='full'?'full':'', isHot(d)?'hot':'', (d.getDay()===0||HOL.includes(k))?'hol':'', picked.includes(k)?'sel':''].filter(Boolean).join(' ');
+    h += `<button type="button" data-d="${k}" class="${cls}" ${st?'disabled':''}>${i}</button>`;
+  }
+  g.innerHTML = h;
+  $('#calPrev').disabled = view <= new Date(today.getFullYear(), today.getMonth(), 1);
+  // drop picks that became invalid
+  const before = picked.length; picked = picked.filter(k => !dayState(new Date(k+'T00:00:00'))); if(picked.length !== before){ drawPicked(); update(); }
+}
+function drawPicked(){
+  $('#picked').innerHTML = picked.map(k => `<span>${k.replace(/-/g,'.')}<button type="button" data-x="${k}" aria-label="remove">×</button></span>`).join('');
+}
+$('#calGrid').addEventListener('click', e => {
+  const b = e.target.closest('button[data-d]'); if(!b || b.disabled) return;
+  const k = b.dataset.d;
+  if(picked.includes(k)) picked = picked.filter(x => x!==k);
+  else { if(picked.length >= 3){ alert(T.max3); return; } picked.push(k); picked.sort(); }
+  drawPicked(); drawCal(); update();
+});
+$('#picked').addEventListener('click', e => { const b = e.target.closest('[data-x]'); if(!b) return; picked = picked.filter(x => x!==b.dataset.x); drawPicked(); drawCal(); update(); });
+$('#calPrev').addEventListener('click', () => { view.setMonth(view.getMonth()-1); drawCal(); });
+$('#calNext').addEventListener('click', () => { view.setMonth(view.getMonth()+1); drawCal(); });
+drawCal();
+if(API.startsWith('http')) fetch(API + '?a=blocked&t=' + Date.now()).then(r => r.json()).then(j => { BLOCKED = j.branches || {}; drawCal(); }).catch(()=>{});
+
+// ---------- estimate ----------
+const won = man => LANG==='ko' ? '약 ' + ((Math.round(man*10)/10).toLocaleString('ko-KR',{maximumFractionDigits:1})) + '만원' : '≈ ₩' + Math.round(man*10000).toLocaleString('en-US');
+function estimate(lang){
+  const LL = lang==='ko' ? {custom:'맞춤 견적', customCalc:g=>`${g}명 · 예산과 구성에 맞춰 설계`, needG:'인원 미정', calc:(n,p,g)=>`${n} 1인 ${p}만원 × ${g}명`} : T;
+  const g = +gIn.value || 0, pk = PK[pkSel];
+  if(pkSel==='D' || !g) return {total: LL.custom, calc: g ? LL.customCalc(g) : LL.needG};
+  const tot = lang==='ko' ? '약 ' + ((Math.round(pk.p*g*10)/10).toLocaleString('ko-KR',{maximumFractionDigits:1})) + '만원' : won(pk.p*g);
+  return {total: tot, calc: LL.calc(pk.n, pk.p, g)};
+}
+function update(){
+  const e = estimate(LANG);
+  $('#estTotal').textContent = e.total; $('#mTotal').textContent = e.total; $('#estCalc').textContent = e.calc;
+  $('#eType').textContent = chipShow('행사 종류') || '-';
+  $('#eBranch').textContent = chipShow('희망 지점') || '-';
+  $('#eDate').textContent = picked.length ? picked.map(d=>d.slice(5).replace('-','/')).join(', ') : (chipShow('날짜 유연성') || '-');
+  $('#eTime').textContent = [chipShow('시작 시간'), chipShow('이용 시간')].filter(Boolean).join(' · ') || '-';
+  const n = ['음식 추가 옵션','음료·와인 옵션','연출·장비 옵션','서비스 옵션'].map(chipVal).filter(Boolean).join(', ').split(', ').filter(Boolean).length;
+  $('#eOpt').textContent = n ? T.opt(n) : T.none;
+  const flags = [], ds = picked.map(k => new Date(k+'T12:00:00'));
+  if(ds.some(isHot)) flags.push(T.fHot);
+  if(ds.some(d => d.getDay()===0||d.getDay()===6) && /전체/.test(chipVal('대관 형태'))) flags.push(T.fWeekend);
+  if(/4시간|5시간/.test(chipVal('이용 시간'))) flags.push(T.fLong);
+  if(ds.some(d => d.getDay()===0) && /서여의도/.test(chipVal('희망 지점'))) flags.push(T.fSun);
+  if((+gIn.value||0) > 8 && /마곡|동대문/.test(chipVal('희망 지점')) && /룸/.test(chipVal('대관 형태'))) flags.push(T.fRoom);
+  const fl = $('#eFlag'); fl.style.display = flags.length ? 'block' : 'none'; fl.innerHTML = flags.join('<br>');
+}
+update();
+
+// source
+const qs = new URLSearchParams(location.search);
+const src = [qs.get('s'), qs.get('utm_source'), qs.get('utm_campaign'), document.referrer && !document.referrer.includes(location.host) ? document.referrer : ''].filter(Boolean).join(' | ') || 'direct';
+
+// submit
+$('#f').addEventListener('submit', async ev => {
+  ev.preventDefault();
+  let ok = true;
+  const name = $('#name').value.trim(), email = $('#email').value.trim();
+  $('#fName').classList.toggle('bad', !name); if(!name) ok = false;
+  const em = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email); $('#fEmail').classList.toggle('bad', !em); if(!em) ok = false;
+  const ag = $('#agree').checked && $('#agree2').checked; $('#fAgree').classList.toggle('bad', !ag); if(!ag) ok = false;
+  const gOk = (+gIn.value||0) >= 1; gIn.closest('.fld').classList.toggle('bad', !gOk); if(!gOk) ok = false;
+  if(!ok){ const b = document.querySelector('.fld.bad'); b && b.scrollIntoView({behavior:'smooth', block:'center'}); return; }
+  const btn = $('#sendBtn'); btn.disabled = true; btn.textContent = T.sending;
+  const e = estimate('ko'), eShow = estimate(LANG);
+  const secs = Math.round((Date.now()-t0)/1000);
+  const data = {
+    '이름': name, '이메일': email, '전화번호': $('#tel').value.trim(), '연락 선호': chipVal('연락 선호'), '인스타그램 ID': $('#ig').value.trim(),
+    '행사 종류': chipVal('행사 종류'), '행사 설명': $('#desc').value.trim(), '희망 지점': chipVal('희망 지점'), '대관 형태': chipVal('대관 형태'), '좌석 형태': chipVal('좌석 형태'),
+    '날짜 유연성': chipVal('날짜 유연성'), '시작 시간': chipVal('시작 시간'), '이용 시간': chipVal('이용 시간').replace(/\s*기본/,''), '예상 인원': String(gIn.value),
+    '패키지': pkSel==='D' ? 'CUSTOM · 맞춤 견적' : `${PK[pkSel].n} · 1인 ${PK[pkSel].p}만원`,
+    '음식 추가 옵션': chipVal('음식 추가 옵션'), '음료·와인 옵션': chipVal('음료·와인 옵션'), '연출·장비 옵션': chipVal('연출·장비 옵션'), '서비스 옵션': chipVal('서비스 옵션'),
+    '식이 제한·알레르기': $('#diet').value.trim(), '예산': chipVal('예산'), '결제·증빙': chipVal('결제·증빙'), '알게 된 경로': chipVal('알게 된 경로'),
+    '요청사항·질문': $('#note').value.trim(), '예상 금액': `${e.total} (${e.calc})`, '개인정보 동의': '동의(규정 확인 포함)', '마케팅 수신 동의': $('#mkt').checked ? '동의' : '미동의', '유입 경로': src,
+    '희망 날짜 1': picked[0]||'', '희망 날짜 2': picked[1]||'', '희망 날짜 3': picked[2]||'',
+    '언어': LANG, '봇체크': `v1|${secs}|${$('#website').value ? 'hp' : 'ok'}`,
+  };
+  const body = new URLSearchParams();
+  Object.entries(data).forEach(([k,v]) => { if(v && ENTRY[k]) body.append(ENTRY[k], v); });
+  try { await fetch(FORM_ACTION, {method:'POST', mode:'no-cors', body}); } catch(err) {}
+  $('#f').style.display = 'none'; $('#mbar').classList.remove('show');
+  $('#doneTotal').textContent = eShow.total; $('#doneCalc').textContent = eShow.calc + ' · ' + T.ref;
+  const d = $('#done'); d.style.display = 'block'; d.scrollIntoView({behavior:'smooth', block:'start'});
+});
+
+// FAQ
+let FAQ = {updated:'', items:[]}, faqCat = '';
+function renderFaq(){
+  const q = ($('#faqQ').value||'').trim().toLowerCase();
+  const items = FAQ.items.filter(it => (!faqCat || it.cat===faqCat) && (!q || (it.q+it.a).toLowerCase().includes(q)));
+  $('#faqList').innerHTML = items.map(it => `<details><summary><span class="c">${it.cat}</span>${it.q}</summary><p>${it.a}</p></details>`).join('') || `<p style="padding:24px 0;color:var(--sub)">${T.nofaq}</p>`;
+}
+fetch('faq.json?v=' + Date.now()).then(r => r.json()).then(j => {
+  FAQ = j; $('#faqUpd').textContent = j.updated ? T.upd + j.updated : '';
+  const cats = [...new Set(j.items.map(i => i.cat))];
+  $('#faqCats').innerHTML = `<button type="button" class="chip on" data-c="">${T.all}</button>` + cats.map(c => `<button type="button" class="chip" data-c="${c}">${c}</button>`).join('');
+  $('#faqCats').addEventListener('click', e => { const c = e.target.closest('.chip'); if(!c) return; $$('#faqCats .chip').forEach(x=>x.classList.remove('on')); c.classList.add('on'); faqCat = c.dataset.c; renderFaq(); });
+  renderFaq();
+}).catch(() => renderFaq());
+$('#faqQ').addEventListener('input', renderFaq);
+</script>
+</body>
+</html>
