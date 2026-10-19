@@ -1,0 +1,125 @@
+{
+ "updated": "2026.10.20",
+ "items": [
+  {
+   "cat": "Booking & Dates",
+   "q": "Does sending an inquiry book the date right away?",
+   "a": "No. Private hire at TAP SHOP BAR is approval-based. We check the space and our operations, quote only for dates we can host, and your booking is confirmed once the deposit is received. Year-end, weekends and holidays fill up fast, so please inquire early."
+  },
+  {
+   "cat": "Booking & Dates",
+   "q": "How far in advance should I book?",
+   "a": "For a weekend full buyout, we recommend at least 4 weeks ahead. During wedding season (May, June, September, October) and the year-end season (December), dates tend to fill 2–3 months in advance. You can book an event up to a year out now; in that case, pricing is set at contract signing based on the event year."
+  },
+  {
+   "cat": "Booking & Dates",
+   "q": "Can I inquire if my date isn't set yet?",
+   "a": "Of course. It's fine if you've only narrowed it down to a month or a weekday, like \"a Saturday in July.\" Share your candidate dates and we'll send a quote along with the dates that are available."
+  },
+  {
+   "cat": "Booking & Dates",
+   "q": "How long is a private hire?",
+   "a": "Packages are based on 3 hours. You can arrive 30 minutes early to set up, and extensions are available. Extension pricing is included in your quote."
+  },
+  {
+   "cat": "Booking & Dates",
+   "q": "Can I see the venue before the event?",
+   "a": "Yes, feel free to drop by anytime during opening hours. Let us know in advance and a manager will show you the space, flow and sample setups in person."
+  },
+  {
+   "cat": "Booking & Dates",
+   "q": "A date is blocked on the calendar.",
+   "a": "That date is already booked for another private event or closed for operational reasons. Please choose another date or try a different location. Seoyeouido is closed on Sundays, so Sundays are blocked there."
+  },
+  {
+   "cat": "Booking & Dates",
+   "q": "How many guests can you host?",
+   "a": "Private rooms seat 4–8. For full buyouts, capacity depends on the location and the format (standing or seated). Tell us your numbers and we'll recommend the best location and layout."
+  },
+  {
+   "cat": "Pricing & Payment",
+   "q": "What's included in the package price?",
+   "a": "Everything: the food and drinks in your package, standard table setting, service staff, a dedicated manager and VAT. Bringing flowers, a photo backdrop or a cake is free, as is use of the microphone and background music."
+  },
+  {
+   "cat": "Pricing & Payment",
+   "q": "Is there a minimum spend?",
+   "a": "Full buyouts on weekends, public holidays and during the year-end season have a minimum spend that varies by location. If a smaller group falls short of the minimum, we can put the difference toward menu upgrades or wine."
+  },
+  {
+   "cat": "Pricing & Payment",
+   "q": "How much is the deposit, and when is it due?",
+   "a": "Once TAP SHOP BAR approves your date and sends the quote, please pay 20% of the total as a deposit within 3 days. Your booking is confirmed the moment the payment is received. Until then it's a provisional hold, which is released if the deadline passes. The balance is settled on the event day."
+  },
+  {
+   "cat": "Pricing & Payment",
+   "q": "What payment methods do you accept? Can you issue a tax invoice?",
+   "a": "We accept bank transfers and card payments. We issue tax invoices for company events and cash receipts for individuals. Please select the documentation you need in the inquiry form."
+  },
+  {
+   "cat": "Pricing & Payment",
+   "q": "What if my guest count changes?",
+   "a": "Please confirm your final guest count 7 days before the event; we'll send you a reminder email at that point. If numbers drop after that, we'll bill based on the confirmed count. If numbers go up, we'll do our best to accommodate right up to the day."
+  },
+  {
+   "cat": "Pricing & Payment",
+   "q": "Can I get my deposit back if I cancel?",
+   "a": "Cancel 30 or more days before the event for a full refund of your deposit, or 29–14 days before for 50%. From 13 days before through the event day, the deposit is non-refundable. One date change is free up to 30 days before, and if we have to cancel on our side, you'll receive a full refund."
+  },
+  {
+   "cat": "Pricing & Payment",
+   "q": "Will I get reminders before the event?",
+   "a": "Yes. Once confirmed, we'll email you 30 days before (last day for a full refund), 14 days before (menu and setup finalized; last day for a 50% refund), 7 days before (final guest count) and 1 day before (directions)."
+  },
+  {
+   "cat": "Food & Drinks",
+   "q": "Can I choose the menu myself?",
+   "a": "Yes. Within your package, we'll build the finger food selection together from the TAP SHOP BAR menu. You can also add signature dishes such as oysters, burrata and steak."
+  },
+  {
+   "cat": "Food & Drinks",
+   "q": "Some of our guests have allergies or are vegetarian.",
+   "a": "Just note it in the inquiry form and we'll prepare for them separately when planning the menu. We can also discuss vegan and gluten-free alternatives."
+  },
+  {
+   "cat": "Food & Drinks",
+   "q": "What wines can we drink?",
+   "a": "You can enjoy wines from our tap lineup by the glass, and add bottles from our cellar. We can also arrange a sparkling welcome drink, non-alcoholic and zero wines, and coffee."
+  },
+  {
+   "cat": "Food & Drinks",
+   "q": "Can we bring a cake or outside food?",
+   "a": "Cakes are welcome free of charge. Any other outside food needs to be arranged in advance for food safety reasons."
+  },
+  {
+   "cat": "Food & Drinks",
+   "q": "Can we bring our own wine?",
+   "a": "Yes. Corkage is ₩20,000 per bottle, and we'll provide the glassware and chilling."
+  },
+  {
+   "cat": "Styling & Facilities",
+   "q": "Can we do our own flowers, photo backdrop or decor?",
+   "a": "Yes, bringing them in is free. Set up during the setup time before the event starts, and please check with us in advance about any decorations that use nails or tape on the walls. If you need a florist or decor vendor, we can connect you."
+  },
+  {
+   "cat": "Styling & Facilities",
+   "q": "Do you have a microphone, sound system and projector?",
+   "a": "Microphones and background music are free at every location. Projector and video equipment varies by location, so we'll go over it with your quote."
+  },
+  {
+   "cat": "Styling & Facilities",
+   "q": "Will other guests be there during our event?",
+   "a": "With a full buyout, the venue is yours alone. For partial hires and private rooms, we arrange the space so you're separated from regular guests."
+  },
+  {
+   "cat": "Styling & Facilities",
+   "q": "Is parking available?",
+   "a": "Parking varies by location. We'll include parking and directions for your confirmed location with your quote."
+  },
+  {
+   "cat": "Other",
+   "q": "I can't find the answer I'm looking for.",
+   "a": "Leave your question in the \"Requests · Questions\" field of the inquiry form, or email us at hello@tsb.wine. We keep adding frequently asked questions to this FAQ."
+  }
+ ]
+}
