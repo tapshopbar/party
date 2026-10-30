@@ -240,6 +240,41 @@ footer a{color:rgba(255,253,252,.85)}
 .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
 .reveal.in{opacity:1;transform:none}
 
+/* ===== chooser (3 tracks) ===== */
+.choose{padding:80px 0 30px}
+.ch-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:34px}
+.ch{background:#fff;border:1px solid var(--line);border-radius:22px;padding:26px 24px;display:flex;flex-direction:column;cursor:pointer;text-align:left;font:inherit;color:inherit;transition:border-color .15s,transform .15s}
+.ch:hover{border-color:var(--pine);transform:translateY(-2px)}
+.ch .ppl{font-size:13px;font-weight:800;letter-spacing:.06em;color:var(--pine)}
+.ch h3{font-size:22px;margin:10px 0 8px}
+.ch p{margin:0 0 16px;color:var(--sub);font-size:14.5px;line-height:1.6}
+.ch ul{list-style:none;margin:0 0 18px;padding:14px 0 0;border-top:1px solid var(--line);font-size:14px}
+.ch li{padding:4px 0}
+.ch li b{display:inline-block;min-width:64px;color:var(--sub);font-weight:600}
+.ch .go{margin-top:auto;font-weight:800;color:var(--pine)}
+.ch.full{background:var(--pine);color:var(--cream);border-color:var(--pine)}
+.ch.full p,.ch.full li b{color:rgba(255,253,252,.75)}.ch.full .ppl,.ch.full .go{color:var(--yellow)}.ch.full ul{border-color:rgba(255,253,252,.2)}
+@media(max-width:900px){.ch-grid{grid-template-columns:1fr}}
+.tbl{display:none;margin-top:18px;background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px}
+.tbl.show{display:block}
+.tbl-g{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-top:14px}
+.tbl-g a{display:block;text-decoration:none;border:1px solid #D9D4D1;border-radius:14px;padding:14px;color:var(--ink)}
+.tbl-g a:hover{border-color:var(--pine)}
+.tbl-g a b{display:block;font-size:15px}.tbl-g a span{font-size:12.5px;color:var(--sub)}
+@media(max-width:900px){.tbl-g{grid-template-columns:repeat(2,1fr)}}
+.modes{display:inline-flex;background:#fff;border:1px solid var(--line);border-radius:999px;padding:4px;margin:6px 0 4px}
+.modes button{font:inherit;font-weight:700;font-size:14.5px;border:0;background:transparent;border-radius:999px;padding:10px 18px;cursor:pointer;color:var(--sub)}
+.modes button.on{background:var(--pine);color:var(--cream)}
+.grp-note{display:none;background:#E9F1EC;border-left:4px solid var(--pine);border-radius:0 14px 14px 0;padding:16px 18px;margin:20px 0 0;font-size:14.5px;line-height:1.7}
+body.m-group .grp-note{display:block}
+body.m-group .only-full{display:none!important}
+body.m-full .only-group{display:none!important}
+body.prefilled [data-pf]{display:none!important}
+body.m-group .mbar{display:none!important}
+.pf-box{display:none;background:#0F2A20;color:#FFFDFC;border-radius:16px;padding:16px 18px;margin:0 0 22px;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+body.prefilled .pf-box{display:flex}
+.pf-box b{font-size:16px}.pf-box span{opacity:.8;font-size:13.5px;display:block}
+.pf-box button{font:inherit;font-weight:700;background:rgba(255,253,252,.15);color:#FFFDFC;border:0;border-radius:999px;padding:9px 14px;cursor:pointer}
 /* ===== season: Winter in Wine (green) ===== */
 :root{--pine:#0F2A20;--rose:#8E2A3A}
 .hero:after{background:linear-gradient(180deg,rgba(15,42,32,.30) 0%,rgba(15,42,32,.45) 45%,rgba(10,31,23,.94) 100%)}
@@ -261,7 +296,7 @@ footer{background:#0A1F17}
 .lang{display:flex;gap:2px;margin-right:6px}
 .lang a{font-size:12.5px!important;padding:4px 7px;border-radius:999px;opacity:.75!important}
 .lang a.cur{opacity:1!important;font-weight:700!important;text-decoration:underline;text-underline-offset:4px}
-@media(max-width:760px){.lang{display:flex!important}.lang a{display:inline!important;color:var(--cream)}.hdr.solid .lang a{color:var(--ink)}}
+@media(max-width:760px){.hdr .cta{white-space:nowrap;padding:8px 13px;font-size:13px}.hdr nav{gap:10px}.lang a{padding:3px 4px!important;font-size:11.5px!important}.lang{display:flex!important}.lang a{display:inline!important;color:var(--cream)}.hdr.solid .lang a{color:var(--ink)}}
 /* approval box */
 .appr{background:#fff;border:1px solid var(--line);border-left:4px solid var(--pine);border-radius:16px;padding:22px 24px;margin:34px 0 0;display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
 .appr .k{font-size:12px;letter-spacing:.12em;color:var(--pine);font-weight:800}
@@ -323,7 +358,7 @@ footer{background:#0A1F17}
     <a href="#process">How It Works</a>
     <a href="#policy">Cancellation & Refunds</a>
     <a href="#faq">FAQ</a>
-    <a class="cta" href="#inquiry">Inquire Now</a>
+    <a class="cta" href="#choose">Inquire</a>
   </nav>
 </header>
 
@@ -335,7 +370,7 @@ footer{background:#0A1F17}
     <h1>Your own party,<br>filled with wine.</h1>
     <p>Wedding after-parties, birthdays, company gatherings. Book all of TAP SHOP BAR, or just a private room. <b>Just tell us your date and group size, and we'll send a quote within 24 hours.</b></p>
     <div class="row">
-      <a class="btn btn-wine" href="#inquiry">Inquire Now →</a>
+      <a class="btn btn-wine" href="#choose">Book or inquire →</a>
       <a class="btn btn-ghost" href="#packages">View Packages</a>
       <span class="note">From ₩55,000 per person · 3 hours · VAT included</span>
     </div>
@@ -351,6 +386,45 @@ footer{background:#0A1F17}
   </div>
 </div>
 
+<section class="choose" id="choose">
+  <div class="wrap">
+    <div class="eyebrow" style="color:var(--rose)">How many guests?</div>
+    <h2 style="margin:12px 0 14px">How many guests?</h2>
+    <p class="lead">How you book depends on group size. Small groups book instantly; larger groups leave an inquiry.</p>
+    <div class="ch-grid">
+      <button type="button" class="ch" data-track="table">
+        <div class="ppl">2–12 guests</div><h3>Table · Room booking</h3>
+        <p>Birthdays, get-togethers, team dinners. Book instantly on Naver.</p>
+        <ul><li><b>Confirmed</b>Instantly</li><li><b>Deposit</b>None (Naver policy)</li><li><b>Menu</b>Regular menu</li></ul>
+        <span class="go">Book now →</span>
+      </button>
+      <button type="button" class="ch" data-track="group">
+        <div class="ppl">13–30 guests</div><h3>Group booking</h3>
+        <p>Part of the hall, just for your group. The store manager will guide you on menu and price.</p>
+        <ul><li><b>Confirmed</b>After manager confirms</li><li><b>Deposit</b>Set by store</li><li><b>Menu</b>Group set · per person</li></ul>
+        <span class="go">Group booking inquiry →</span>
+      </button>
+      <button type="button" class="ch full" data-track="full">
+        <div class="ppl">30+ guests · Full venue</div><h3>Full buyout</h3>
+        <p>The whole venue. Wedding after-parties, year-end parties, brand events.</p>
+        <ul><li><b>Confirmed</b>Approval + 20% deposit</li><li><b>Price</b>From ₩55,000 per person</li><li><b>Terms</b>Weekend minimum spend</li></ul>
+        <span class="go">Full buyout inquiry →</span>
+      </button>
+    </div>
+    <div class="tbl" id="tbl">
+      <b style="font-size:17px">Which location?</b> <span class="muted" style="color:var(--sub);font-size:14px">You'll go to the Naver booking page.</span>
+      <div class="tbl-g">
+        <a href="https://m.booking.naver.com/booking/6/bizes/1180715/items/6096170" target="_blank" rel="noopener"><b>Cheonggye</b><span>Hall table for 6–8</span></a>
+        <a href="https://map.naver.com/p/search/%ED%83%AD%EC%83%B5%EB%B0%94%20%EC%83%81%EC%95%94" target="_blank" rel="noopener"><b>Sangam</b><span>View on Naver</span></a>
+        <a href="https://m.booking.naver.com/booking/6/bizes/1713764/items/7996202" target="_blank" rel="noopener"><b>Magok</b><span>Room for 4–8</span></a>
+        <a href="https://m.booking.naver.com/booking/6/bizes/1125285/items/6052917" target="_blank" rel="noopener"><b>Dongdaemun</b><span>Room for 6–8</span></a>
+        <a href="https://map.naver.com/p/search/%ED%83%AD%EC%83%B5%EB%B0%94%20%EC%84%9C%EC%97%AC%EC%9D%98%EB%8F%84" target="_blank" rel="noopener"><b>Seoyeouido</b><span>Coming soon</span></a>
+      </div>
+      <p style="margin:14px 0 0;font-size:13.5px;color:var(--sub)">If your time isn't available or your group is larger than online booking allows, leave a <a href="#inquiry" data-track="group" style="color:var(--pine);font-weight:700">group booking inquiry</a>.</p>
+    </div>
+  </div>
+</section>
+
 <section class="xmas" id="xmas">
   <div class="wrap">
     <div>
@@ -362,7 +436,7 @@ footer{background:#0A1F17}
     <div class="pts">
       <div class="pt"><b>Christmas · Year-End Parties</b><span>An evening that opens with a sparkling welcome and wine on tap</span></div>
       <div class="pt"><b>Company Year-End Parties · Team Dinners</b><span>Tax invoices issued · Corporate cards accepted</span></div>
-      <div class="pt"><b>3 private rooms in Seoyeouido · Opening 11.09</b><span>Private rooms made for Yeouido office year-end gatherings</span></div>
+      <div class="pt"><b>Seoyeouido · 3 private rooms · Coming soon</b><span>Private rooms made for Yeouido office year-end gatherings</span></div>
     </div>
   </div>
 </section>
@@ -391,8 +465,8 @@ footer{background:#0A1F17}
       <div class="sp big"><img src="../assets/loc_cheonggye.jpg" alt="Cheonggye Samil Building" loading="lazy">
         <div class="t"><span class="badge">Best for large parties</span><h3>Cheonggye · Samil Building</h3><p>A circular hall arranged around our tap island. Right by Cheonggyecheon Stream, and perfect for weekend afternoon full buyouts.</p>
         <div class="tags"><span>Full buyout</span><span>Standing · Seated</span><span>Wedding After-Parties</span><span>Corporate events</span></div></div></div>
-      <div class="sp soon"><div class="mark">OPENING 11.09</div>
-        <div class="t"><span class="badge">NEW</span><h3>Seoyeouido · Paragon D-Arcade</h3><p>Three separate private rooms on B2. Grand opening planned for November 9. Closed Sundays.</p>
+      <div class="sp soon"><div class="mark">COMING SOON</div>
+        <div class="t"><span class="badge">NEW</span><h3>Seoyeouido · Paragon D-Arcade</h3><p>B2, three private rooms. We'll share the opening date once confirmed. Closed Sundays.</p>
         <div class="tags"><span>3 private rooms</span><span>Partial hire · Full buyout</span><span>Yeouido office gatherings</span></div></div></div>
       <div class="sp"><img src="../assets/loc_hall.jpg" alt="TAP SHOP BAR hall" loading="lazy">
         <div class="t"><h3>Hall · Partial Hire</h3><p>A semi-private setup that shares the venue with regular guests. Available areas vary by location, so we'll walk you through them during your consultation.</p>
@@ -425,7 +499,7 @@ footer{background:#0A1F17}
         <ul><li>Course dinners, oyster bar</li><li>Bottled wine · Champagne tower</li><li>Brand events, tastings</li><li>Tailored to your budget</li></ul>
         <div class="pick"><button class="btn" data-pick="D">Request a custom quote</button></div></div>
     </div>
-    <div class="incl"><span><b>Included with every package</b></span><span>Dedicated manager</span><span>Standard table setting · Service staff</span><span>Bring flowers, a photo backdrop or cake at no charge</span><span>Microphone · Background music</span></div>
+    <div class="incl"><span><b>Included with every package</b></span><span>Dedicated manager</span><span>Service staff</span><span>Bring your own cake free</span><span>BGM</span><span><b>Discussed per location</b> · Flowers, photo backdrop, microphone, table setting</span></div>
   </div>
 </section>
 
@@ -487,9 +561,11 @@ footer{background:#0A1F17}
 <section class="inq" id="inquiry">
   <div class="wrap">
     <div class="eyebrow" style="color:var(--rose)">Rental Inquiry · Private Events</div>
-    <h2 style="margin:12px 0 14px">Make an inquiry.</h2>
-    <p class="lead">The more detail you share, the more accurate your quote. Feel free to leave anything you're unsure of blank. <span class="req">*</span> marks a required field.</p>
-    <div class="appr">
+    <h2 style="margin:12px 0 14px">Book or inquire.</h2>
+    <div class="modes" id="modes"><button type="button" data-mode="group">Group booking · 13–30</button><button type="button" data-mode="full" class="on">Full buyout · 30+</button></div>
+    <p class="lead only-full">The more detail you share, the more accurate your quote. Feel free to leave anything you're unsure of blank. <span class="req">*</span> marks a required field.</p>
+    <div class="grp-note"><b>Group bookings are handled by the store manager.</b> Leave your date, group size and contact, and the manager will call within 24 hours with set menus, per-person pricing and seating. For 12 or fewer, <a href="/reservation/" style="color:var(--pine);font-weight:700">instant booking</a>is faster.</div>
+    <div class="appr only-full">
       <div><div class="k">01 · Approval-based</div><b>Every private event is subject to approval</b><span>We check space and operations, and quote only for dates we can host. An inquiry is not a booking.</span></div>
       <div><div class="k">02 · Confirmed by deposit</div><b>Confirmed once the 20% deposit is paid</b><span>Pay within 3 days of approving the quote and your date is confirmed. Until then, it's a provisional hold.</span></div>
       <div><div class="k">03 · Books up fast</div><b>Year-end, weekends and holidays fill quickly</b><span>December, weekend evenings and public holidays book up early. If you have a date in mind, inquire soon.</span></div>
@@ -538,7 +614,7 @@ footer{background:#0A1F17}
             <div class="chips" data-name="희망 지점" data-single>
               <button type="button" class="chip" data-v="청계 · 삼일빌딩">Cheonggye · Samil Building</button><button type="button" class="chip" data-v="서여의도 · 파라곤">Seoyeouido · Paragon</button><button type="button" class="chip" data-v="상암">Sangam</button><button type="button" class="chip" data-v="마곡">Magok</button><button type="button" class="chip" data-v="동대문 · 두타">Dongdaemun · Doota</button><button type="button" class="chip" data-v="추천해 주세요">Recommend one for me</button>
             </div></div>
-          <div class="fld"><div class="lb">Type of hire</div>
+          <div class="fld only-full"><div class="lb">Type of hire</div>
             <div class="chips" data-name="대관 형태" data-single>
               <button type="button" class="chip" data-v="전체 대관">Full buyout</button><button type="button" class="chip" data-v="부분 대관">Partial hire</button><button type="button" class="chip" data-v="룸">Private room</button><button type="button" class="chip" data-v="추천해 주세요">Recommend one for me</button>
             </div></div>
@@ -548,7 +624,7 @@ footer{background:#0A1F17}
             </div></div>
         </div>
 
-        <div class="blk">
+        <div class="blk only-full">
           <h3><span class="num">4</span>Packages & add-ons</h3>
           <div class="fld"><div class="lb">Packages</div>
             <div class="pkopts" id="pkopts">
@@ -577,7 +653,7 @@ footer{background:#0A1F17}
             <input type="text" id="diet" data-name="식이 제한·알레르기" placeholder="e.g. 3 vegetarians, 1 shellfish allergy"></div>
         </div>
 
-        <div class="blk">
+        <div class="blk only-full">
           <h3><span class="num">5</span>Budget & payment</h3>
           <div class="fld"><div class="lb">Total budget</div>
             <div class="chips" data-name="예산" data-single>
@@ -612,7 +688,7 @@ footer{background:#0A1F17}
           <div class="fld" id="fAgree">
             <label class="chk"><input type="checkbox" id="agree"> <span><b>[Required]</b> I agree to the collection of my name, email, phone number and event details to prepare a quote, and to their retention for 1 year after the consultation ends.</span></label>
             <div class="err">Please agree to all required items.</div>
-            <label class="chk"><input type="checkbox" id="agree2"> <span><b>[Required]</b> I understand that private events proceed upon approval and are confirmed once the 20% deposit is paid, and I have read the <a href="#policy">cancellation & refund policy</a>.</span></label>
+            <label class="chk only-full"><input type="checkbox" id="agree2"> <span><b>[Required]</b> I understand that private events proceed upon approval and are confirmed once the 20% deposit is paid, and I have read the <a href="#policy">cancellation & refund policy</a>.</span></label>
             <label class="chk"><input type="checkbox" id="mkt"> <span>[Optional] I'd like to receive TAP SHOP BAR event and seasonal news by email.</span></label>
           </div>
           <div class="hp" aria-hidden="true"><label>Website <input type="text" id="website" tabindex="-1" autocomplete="off"></label></div>
@@ -634,7 +710,8 @@ footer{background:#0A1F17}
       </div>
       </div>
 
-      <aside class="est" id="est">
+      <aside class="est only-group" id="estG"><div class="k">GROUP · Group booking</div><div class="total" style="font-size:30px">Manager will guide you</div><div class="calc">Set menu · per person · seating</div><ul><li><span>Contact</span><span>within 24 hours,</span></li><li><span>Confirmed</span><span>After manager confirms</span></li><li><span>12 or fewer</span><span>Naver booking</span></li></ul><div class="fine">Prices vary by location, day and menu.</div></aside>
+      <aside class="est only-full" id="est">
         <div class="k">ESTIMATE · Estimated total</div>
         <div class="total" id="estTotal">₩2,250,000</div>
         <div class="calc" id="estCalc">₩75,000 per person × 30 guests</div>
@@ -758,6 +835,23 @@ function setPk(p){ pkSel = p; $$('.pko').forEach(b => b.classList.toggle('on', b
 $$('.pko').forEach(b => b.addEventListener('click', () => setPk(b.dataset.p)));
 $$('[data-pick]').forEach(b => b.addEventListener('click', () => { setPk(b.dataset.pick); $('#inquiry').scrollIntoView({behavior:'smooth'}); }));
 
+// ---------- 예약 유형 (단체 / 전체 대관) ----------
+let MODE = 'full';
+function setMode(m){
+  MODE = m; document.body.classList.toggle('m-group', m==='group'); document.body.classList.toggle('m-full', m==='full');
+  $$('#modes button').forEach(b => b.classList.toggle('on', b.dataset.mode===m));
+  const kind = document.querySelector('.chips[data-name="대관 형태"]');
+  if (m==='full') { const c = kind.querySelector('.chip[data-v="전체 대관"]'); if (c && !kind.querySelector('.chip.on')) c.classList.add('on'); if ((+gIn.value||0) < 30) { gIn.value = 40; gR.value = 40; } }
+  else { kind.querySelectorAll('.chip').forEach(x => x.classList.remove('on')); if ((+gIn.value||0) > 30 || (+gIn.value||0) < 13) { gIn.value = 20; gR.value = 20; } }
+  drawCal && drawCal(); update && update();
+}
+$$('#modes button').forEach(b => b.addEventListener('click', () => setMode(b.dataset.mode)));
+document.addEventListener('click', e => {
+  const t = e.target.closest('[data-track]'); if (!t) return;
+  const tr = t.dataset.track;
+  if (tr === 'table') { e.preventDefault(); location.href = '/reservation/'; return; }
+  e.preventDefault(); setMode(tr); $('#inquiry').scrollIntoView({behavior:'smooth'});
+});
 // guests
 const gIn = $('#guests'), gR = $('#grange');
 $$('[data-g]').forEach(b => b.addEventListener('click', () => { gIn.value = Math.max(4, Math.min(300, (+gIn.value||0) + (+b.dataset.g))); gR.value = Math.min(120,gIn.value); update(); }));
@@ -843,6 +937,28 @@ function update(){
   const fl = $('#eFlag'); fl.style.display = flags.length ? 'block' : 'none'; fl.innerHTML = flags.join('<br>');
 }
 update();
+setMode(new URLSearchParams(location.search).get('type')==='group' ? 'group' : 'full');
+// ---------- /reservation 에서 넘어온 값 미리 채우기 (두 번 묻지 않기) ----------
+(function(){
+  const q = new URLSearchParams(location.search);
+  const g = +q.get('g'), d = q.get('d'), t = q.get('t'), br = q.get('b');
+  if (!g && !d && !br) return;
+  const chipOn = (name, pred) => { const grp = document.querySelector(`.chips[data-name="${name}"]`); if(!grp) return null; const c = [...grp.querySelectorAll('.chip')].find(pred); if (c) { if (grp.hasAttribute('data-single')) grp.querySelectorAll('.chip').forEach(x=>x.classList.remove('on')); c.classList.add('on'); } return grp; };
+  const hide = el => el && el.setAttribute('data-pf','');
+  const parts = [];
+  if (g) { gIn.value = g; gR.value = Math.min(120, g); hide(gIn.closest('.fld')); parts.push(g + '명'); }
+  if (br && br !== 'any') { const grp = chipOn('희망 지점', c => (c.dataset.v||'').startsWith(br)); if (grp) { hide(grp.closest('.fld')); parts.push(br); } }
+  if (d && /^\d{4}-\d{2}-\d{2}$/.test(d)) { picked = [d]; const dd = new Date(d+'T12:00:00'); view = new Date(dd.getFullYear(), dd.getMonth(), 1); drawPicked(); const grp = chipOn('날짜 유연성', c => c.dataset.v === '날짜 확정'); hide(grp && grp.closest('.fld')); hide(document.getElementById('cal').closest('.fld')); parts.push(dd.getMonth()+1 + '/' + dd.getDate() + '(' + '일월화수목금토'[dd.getDay()] + ')'); }
+  const TM = {lunch:'점심', afternoon:'오후', dinner:'저녁', late:'늦은 저녁'};
+  if (t && TM[t]) { const grp = chipOn('시작 시간', c => (c.dataset.v||'').startsWith(TM[t] + ' ')); hide(grp && grp.closest('.fld')); parts.push(TM[t]); }
+  const box = document.createElement('div'); box.className = 'pf-box';
+  box.innerHTML = '<div><span>예약 페이지에서 고른 내용</span><b>' + parts.join(' · ') + '</b></div><button type="button">수정하기</button>';
+  box.querySelector('button').onclick = () => document.body.classList.remove('prefilled');
+  document.getElementById('f').prepend(box);
+  document.body.classList.add('prefilled');
+  drawCal(); update();
+  setTimeout(() => document.getElementById('inquiry').scrollIntoView({behavior:'instant'}), 50);
+})();
 
 // source
 const qs = new URLSearchParams(location.search);
@@ -856,7 +972,7 @@ $('#f').addEventListener('submit', async ev => {
   $('#fName').classList.toggle('bad', !name); if(!name) ok = false;
   const em = (IS_STORE && !email) || /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email); $('#fEmail').classList.toggle('bad', !em); if(!em) ok = false;
   if (IS_STORE && !$('#tel').value.trim()) { ok = false; $('#tel').closest('.fld').classList.add('bad'); $('#tel').focus(); }
-  const ag = $('#agree').checked && $('#agree2').checked; $('#fAgree').classList.toggle('bad', !ag); if(!ag) ok = false;
+  const ag = $('#agree').checked && (MODE==='group' || $('#agree2').checked); $('#fAgree').classList.toggle('bad', !ag); if(!ag) ok = false;
   const gOk = (+gIn.value||0) >= 1; gIn.closest('.fld').classList.toggle('bad', !gOk); if(!gOk) ok = false;
   if(!ok){ const b = document.querySelector('.fld.bad'); b && b.scrollIntoView({behavior:'smooth', block:'center'}); return; }
   const btn = $('#sendBtn'); btn.disabled = true; btn.textContent = T.sending;
@@ -864,12 +980,12 @@ $('#f').addEventListener('submit', async ev => {
   const secs = Math.round((Date.now()-t0)/1000);
   const data = {
     '이름': name, '이메일': email, '전화번호': $('#tel').value.trim(), '연락 선호': chipVal('연락 선호'), '인스타그램 ID': $('#ig').value.trim(),
-    '행사 종류': chipVal('행사 종류'), '행사 설명': $('#desc').value.trim(), '희망 지점': chipVal('희망 지점'), '대관 형태': chipVal('대관 형태'), '좌석 형태': chipVal('좌석 형태'),
+    '행사 종류': chipVal('행사 종류'), '행사 설명': $('#desc').value.trim(), '희망 지점': chipVal('희망 지점'), '대관 형태': MODE==='group' ? '단체 예약(부분 대관)' : chipVal('대관 형태'), '좌석 형태': chipVal('좌석 형태'),
     '날짜 유연성': chipVal('날짜 유연성'), '시작 시간': chipVal('시작 시간'), '이용 시간': chipVal('이용 시간').replace(/\s*기본/,''), '예상 인원': String(gIn.value),
-    '패키지': pkSel==='D' ? 'CUSTOM · 맞춤 견적' : `${PK[pkSel].n} · 1인 ${PK[pkSel].p}만원`,
+    '패키지': MODE==='group' ? '단체 · 점장 안내' : pkSel==='D' ? 'CUSTOM · 맞춤 견적' : `${PK[pkSel].n} · 1인 ${PK[pkSel].p}만원`,
     '음식 추가 옵션': chipVal('음식 추가 옵션'), '음료·와인 옵션': chipVal('음료·와인 옵션'), '연출·장비 옵션': chipVal('연출·장비 옵션'), '서비스 옵션': chipVal('서비스 옵션'),
     '식이 제한·알레르기': $('#diet').value.trim(), '예산': chipVal('예산'), '결제·증빙': chipVal('결제·증빙'), '알게 된 경로': chipVal('알게 된 경로'),
-    '요청사항·질문': $('#note').value.trim(), '예상 금액': `${e.total} (${e.calc})`, '개인정보 동의': '동의(규정 확인 포함)', '마케팅 수신 동의': $('#mkt').checked ? '동의' : '미동의', '유입 경로': (IS_STORE ? '매장:' + STORE + ' | ' : '') + src,
+    '요청사항·질문': $('#note').value.trim(), '예상 금액': MODE==='group' ? '단체 · 점장 안내' : `${e.total} (${e.calc})`, '개인정보 동의': '동의(규정 확인 포함)', '마케팅 수신 동의': $('#mkt').checked ? '동의' : '미동의', '유입 경로': (IS_STORE ? '매장:' + STORE + ' | ' : '') + src,
     '희망 날짜 1': picked[0]||'', '희망 날짜 2': picked[1]||'', '희망 날짜 3': picked[2]||'',
     '언어': LANG, '봇체크': `v1|${secs}|${$('#website').value ? 'hp' : 'ok'}`,
   };
@@ -877,7 +993,7 @@ $('#f').addEventListener('submit', async ev => {
   Object.entries(data).forEach(([k,v]) => { if(v && ENTRY[k]) body.append(ENTRY[k], v); });
   try { await fetch(FORM_ACTION, {method:'POST', mode:'no-cors', body}); } catch(err) {}
   $('#f').style.display = 'none'; $('#mbar').classList.remove('show');
-  $('#doneTotal').textContent = eShow.total; $('#doneCalc').textContent = eShow.calc + ' · ' + T.ref;
+  if (MODE==='group') { $('#doneTotal').textContent = '점장이 24시간 안에 연락드려요'; $('#doneCalc').textContent = '세트 메뉴 · 1인 금액 · 좌석을 안내해 드려요'; $$('#done ol li').forEach((li,i)=>{ if(i>0) li.style.display='none'; }); } else { $('#doneTotal').textContent = eShow.total; $('#doneCalc').textContent = eShow.calc + ' · ' + T.ref; }
   const d = $('#done'); d.style.display = 'block'; d.scrollIntoView({behavior:'smooth', block:'start'});
 });
 
