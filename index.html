@@ -240,6 +240,41 @@ footer a{color:rgba(255,253,252,.85)}
 .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
 .reveal.in{opacity:1;transform:none}
 
+/* ===== chooser (3 tracks) ===== */
+.choose{padding:80px 0 30px}
+.ch-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:34px}
+.ch{background:#fff;border:1px solid var(--line);border-radius:22px;padding:26px 24px;display:flex;flex-direction:column;cursor:pointer;text-align:left;font:inherit;color:inherit;transition:border-color .15s,transform .15s}
+.ch:hover{border-color:var(--pine);transform:translateY(-2px)}
+.ch .ppl{font-size:13px;font-weight:800;letter-spacing:.06em;color:var(--pine)}
+.ch h3{font-size:22px;margin:10px 0 8px}
+.ch p{margin:0 0 16px;color:var(--sub);font-size:14.5px;line-height:1.6}
+.ch ul{list-style:none;margin:0 0 18px;padding:14px 0 0;border-top:1px solid var(--line);font-size:14px}
+.ch li{padding:4px 0}
+.ch li b{display:inline-block;min-width:64px;color:var(--sub);font-weight:600}
+.ch .go{margin-top:auto;font-weight:800;color:var(--pine)}
+.ch.full{background:var(--pine);color:var(--cream);border-color:var(--pine)}
+.ch.full p,.ch.full li b{color:rgba(255,253,252,.75)}.ch.full .ppl,.ch.full .go{color:var(--yellow)}.ch.full ul{border-color:rgba(255,253,252,.2)}
+@media(max-width:900px){.ch-grid{grid-template-columns:1fr}}
+.tbl{display:none;margin-top:18px;background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px}
+.tbl.show{display:block}
+.tbl-g{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-top:14px}
+.tbl-g a{display:block;text-decoration:none;border:1px solid #D9D4D1;border-radius:14px;padding:14px;color:var(--ink)}
+.tbl-g a:hover{border-color:var(--pine)}
+.tbl-g a b{display:block;font-size:15px}.tbl-g a span{font-size:12.5px;color:var(--sub)}
+@media(max-width:900px){.tbl-g{grid-template-columns:repeat(2,1fr)}}
+.modes{display:inline-flex;background:#fff;border:1px solid var(--line);border-radius:999px;padding:4px;margin:6px 0 4px}
+.modes button{font:inherit;font-weight:700;font-size:14.5px;border:0;background:transparent;border-radius:999px;padding:10px 18px;cursor:pointer;color:var(--sub)}
+.modes button.on{background:var(--pine);color:var(--cream)}
+.grp-note{display:none;background:#E9F1EC;border-left:4px solid var(--pine);border-radius:0 14px 14px 0;padding:16px 18px;margin:20px 0 0;font-size:14.5px;line-height:1.7}
+body.m-group .grp-note{display:block}
+body.m-group .only-full{display:none!important}
+body.m-full .only-group{display:none!important}
+body.prefilled [data-pf]{display:none!important}
+body.m-group .mbar{display:none!important}
+.pf-box{display:none;background:#0F2A20;color:#FFFDFC;border-radius:16px;padding:16px 18px;margin:0 0 22px;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+body.prefilled .pf-box{display:flex}
+.pf-box b{font-size:16px}.pf-box span{opacity:.8;font-size:13.5px;display:block}
+.pf-box button{font:inherit;font-weight:700;background:rgba(255,253,252,.15);color:#FFFDFC;border:0;border-radius:999px;padding:9px 14px;cursor:pointer}
 /* ===== season: Winter in Wine (green) ===== */
 :root{--pine:#0F2A20;--rose:#8E2A3A}
 .hero:after{background:linear-gradient(180deg,rgba(15,42,32,.30) 0%,rgba(15,42,32,.45) 45%,rgba(10,31,23,.94) 100%)}
@@ -261,7 +296,7 @@ footer{background:#0A1F17}
 .lang{display:flex;gap:2px;margin-right:6px}
 .lang a{font-size:12.5px!important;padding:4px 7px;border-radius:999px;opacity:.75!important}
 .lang a.cur{opacity:1!important;font-weight:700!important;text-decoration:underline;text-underline-offset:4px}
-@media(max-width:760px){.lang{display:flex!important}.lang a{display:inline!important;color:var(--cream)}.hdr.solid .lang a{color:var(--ink)}}
+@media(max-width:760px){.hdr .cta{white-space:nowrap;padding:8px 13px;font-size:13px}.hdr nav{gap:10px}.lang a{padding:3px 4px!important;font-size:11.5px!important}.lang{display:flex!important}.lang a{display:inline!important;color:var(--cream)}.hdr.solid .lang a{color:var(--ink)}}
 /* approval box */
 .appr{background:#fff;border:1px solid var(--line);border-left:4px solid var(--pine);border-radius:16px;padding:22px 24px;margin:34px 0 0;display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
 .appr .k{font-size:12px;letter-spacing:.12em;color:var(--pine);font-weight:800}
@@ -323,7 +358,7 @@ footer{background:#0A1F17}
     <a href="#process">진행 방식</a>
     <a href="#policy">취소·환불</a>
     <a href="#faq">FAQ</a>
-    <a class="cta" href="#inquiry">대관 문의하기</a>
+    <a class="cta" href="#choose">문의하기</a>
   </nav>
 </header>
 
@@ -335,7 +370,7 @@ footer{background:#0A1F17}
     <h1>와인으로 채우는<br>우리만의 파티.</h1>
     <p>웨딩 애프터파티, 생일, 회사 모임까지. 탭샵바를 통째로, 또는 룸으로 빌려 쓰세요. <b>날짜와 인원만 남겨 주시면 24시간 안에 견적을 보내드려요.</b></p>
     <div class="row">
-      <a class="btn btn-wine" href="#inquiry">대관 문의하기 →</a>
+      <a class="btn btn-wine" href="#choose">예약·대관 문의하기 →</a>
       <a class="btn btn-ghost" href="#packages">패키지 보기</a>
       <span class="note">1인 5.5만원부터 · 3시간 · VAT 포함</span>
     </div>
@@ -351,6 +386,45 @@ footer{background:#0A1F17}
   </div>
 </div>
 
+<section class="choose" id="choose">
+  <div class="wrap">
+    <div class="eyebrow" style="color:var(--rose)">How many guests?</div>
+    <h2 style="margin:12px 0 14px">몇 분이 오세요?</h2>
+    <p class="lead">인원에 따라 예약 방법이 달라요. 작은 모임은 바로 예약, 큰 모임은 문의를 남겨 주세요.</p>
+    <div class="ch-grid">
+      <button type="button" class="ch" data-track="table">
+        <div class="ppl">2 ~ 12명</div><h3>테이블 · 룸 예약</h3>
+        <p>생일, 모임, 회식. 네이버 예약으로 바로 잡을 수 있어요.</p>
+        <ul><li><b>확정</b>예약 즉시</li><li><b>예약금</b>없음 (네이버 규칙)</li><li><b>메뉴</b>매장 메뉴 그대로</li></ul>
+        <span class="go">바로 예약하러 가기 →</span>
+      </button>
+      <button type="button" class="ch" data-track="group">
+        <div class="ppl">13 ~ 30명</div><h3>단체 예약</h3>
+        <p>홀 일부를 우리 모임 자리로. 점장이 직접 메뉴와 금액을 안내해요.</p>
+        <ul><li><b>확정</b>점장 확인 후</li><li><b>예약금</b>지점 안내</li><li><b>메뉴</b>단체 세트 · 1인 금액</li></ul>
+        <span class="go">단체 예약 문의 →</span>
+      </button>
+      <button type="button" class="ch full" data-track="full">
+        <div class="ppl">30명 이상 · 매장 전체</div><h3>전체 대관</h3>
+        <p>매장을 통째로. 웨딩 애프터파티, 송년회, 브랜드 행사.</p>
+        <ul><li><b>확정</b>승인 + 예약금 20%</li><li><b>금액</b>1인 5.5만원부터</li><li><b>조건</b>주말 최소 이용 금액</li></ul>
+        <span class="go">전체 대관 문의 →</span>
+      </button>
+    </div>
+    <div class="tbl" id="tbl">
+      <b style="font-size:17px">어느 지점으로 예약할까요?</b> <span class="muted" style="color:var(--sub);font-size:14px">네이버 예약 페이지로 이동해요.</span>
+      <div class="tbl-g">
+        <a href="https://m.booking.naver.com/booking/6/bizes/1180715/items/6096170" target="_blank" rel="noopener"><b>청계</b><span>홀 6~8인 테이블</span></a>
+        <a href="https://map.naver.com/p/search/%ED%83%AD%EC%83%B5%EB%B0%94%20%EC%83%81%EC%95%94" target="_blank" rel="noopener"><b>상암</b><span>네이버에서 보기</span></a>
+        <a href="https://m.booking.naver.com/booking/6/bizes/1713764/items/7996202" target="_blank" rel="noopener"><b>마곡</b><span>룸 4~8인</span></a>
+        <a href="https://m.booking.naver.com/booking/6/bizes/1125285/items/6052917" target="_blank" rel="noopener"><b>동대문</b><span>룸 6~8인</span></a>
+        <a href="https://map.naver.com/p/search/%ED%83%AD%EC%83%B5%EB%B0%94%20%EC%84%9C%EC%97%AC%EC%9D%98%EB%8F%84" target="_blank" rel="noopener"><b>서여의도</b><span>오픈 준비 중</span></a>
+      </div>
+      <p style="margin:14px 0 0;font-size:13.5px;color:var(--sub)">원하는 시간이 없거나 네이버 예약 인원보다 많으면 <a href="#inquiry" data-track="group" style="color:var(--pine);font-weight:700">단체 예약 문의</a>로 남겨 주세요.</p>
+    </div>
+  </div>
+</section>
+
 <section class="xmas" id="xmas">
   <div class="wrap">
     <div>
@@ -362,7 +436,7 @@ footer{background:#0A1F17}
     <div class="pts">
       <div class="pt"><b>크리스마스 · 연말 파티</b><span>스파클링 웰컴과 탭 와인으로 시작하는 저녁</span></div>
       <div class="pt"><b>회사 송년회 · 팀 회식</b><span>세금계산서 발행 · 법인카드 결제</span></div>
-      <div class="pt"><b>서여의도 룸 3개 · 11.09 오픈 예정</b><span>여의도 직장인 연말 모임에 딱 맞는 독립 룸</span></div>
+      <div class="pt"><b>서여의도 룸 3개 · 오픈 준비 중</b><span>여의도 직장인 연말 모임에 딱 맞는 독립 룸</span></div>
     </div>
   </div>
 </section>
@@ -391,8 +465,8 @@ footer{background:#0A1F17}
       <div class="sp big"><img src="assets/loc_cheonggye.jpg" alt="청계 삼일빌딩점" loading="lazy">
         <div class="t"><span class="badge">대형 파티 추천</span><h3>청계 · 삼일빌딩점</h3><p>탭 아일랜드를 중심으로 둘러앉는 원형 홀. 청계천 옆, 주말 오후 전체 대관에 가장 잘 맞아요.</p>
         <div class="tags"><span>전체 대관</span><span>스탠딩 · 착석</span><span>웨딩 애프터파티</span><span>기업 행사</span></div></div></div>
-      <div class="sp soon"><div class="mark">OPENING 11.09</div>
-        <div class="t"><span class="badge">NEW</span><h3>서여의도 · 파라곤 디아케이드</h3><p>지하 2층, 독립된 룸 3개. 11월 9일 정식 오픈 예정. 일요일 휴무.</p>
+      <div class="sp soon"><div class="mark">COMING SOON</div>
+        <div class="t"><span class="badge">NEW</span><h3>서여의도 · 파라곤 디아케이드</h3><p>지하 2층, 독립된 룸 3개. 오픈 일정은 확정되면 안내해 드려요. 일요일 휴무.</p>
         <div class="tags"><span>룸 3개</span><span>부분 · 전체 대관</span><span>여의도 직장인 모임</span></div></div></div>
       <div class="sp"><img src="assets/loc_hall.jpg" alt="탭샵바 홀" loading="lazy">
         <div class="t"><h3>홀 · 부분 대관</h3><p>일반 손님과 공간을 나눠 쓰는 세미 프라이빗 구성. 지점마다 가능한 구역이 달라 상담 때 안내해 드려요.</p>
@@ -425,7 +499,7 @@ footer{background:#0A1F17}
         <ul><li>코스 디너, 오이스터 바</li><li>보틀 와인 · 샴페인 타워</li><li>브랜드 행사, 시음회</li><li>예산에 맞춘 구성</li></ul>
         <div class="pick"><button class="btn" data-pick="D">맞춤 견적 문의</button></div></div>
     </div>
-    <div class="incl"><span><b>모든 패키지 포함</b></span><span>전담 매니저</span><span>기본 테이블 세팅 · 서빙</span><span>꽃 · 포토존 · 케이크 반입 무료</span><span>마이크 · BGM</span></div>
+    <div class="incl"><span><b>모든 패키지 포함</b></span><span>담당 매니저</span><span>서빙</span><span>케이크 반입 무료</span><span>BGM</span><span><b>지점별 상담 후 안내</b> · 꽃·포토존·마이크·테이블 세팅</span></div>
   </div>
 </section>
 
@@ -487,9 +561,11 @@ footer{background:#0A1F17}
 <section class="inq" id="inquiry">
   <div class="wrap">
     <div class="eyebrow" style="color:var(--rose)">Rental Inquiry · 대관 문의</div>
-    <h2 style="margin:12px 0 14px">대관 문의하기.</h2>
-    <p class="lead">자세히 적어주실수록 정확한 견적을 드릴 수 있어요. 모르는 항목은 비워 두셔도 괜찮아요. <span class="req">*</span> 표시만 필수예요.</p>
-    <div class="appr">
+    <h2 style="margin:12px 0 14px">예약 · 대관 문의하기.</h2>
+    <div class="modes" id="modes"><button type="button" data-mode="group">단체 예약 · 13~30명</button><button type="button" data-mode="full" class="on">전체 대관 · 30명 이상</button></div>
+    <p class="lead only-full">자세히 적어주실수록 정확한 견적을 드릴 수 있어요. 모르는 항목은 비워 두셔도 괜찮아요. <span class="req">*</span> 표시만 필수예요.</p>
+    <div class="grp-note"><b>단체 예약은 지점 점장이 직접 안내해요.</b> 날짜·인원·연락처만 남겨 주시면 24시간 안에 점장이 연락드려 세트 메뉴와 1인 금액, 좌석을 안내해 드려요. 12명 이하는 <a href="/reservation/" style="color:var(--pine);font-weight:700">바로 예약</a>이 더 빨라요.</div>
+    <div class="appr only-full">
       <div><div class="k">01 · 승인제</div><b>모든 대관은 승인 후 진행돼요</b><span>공간과 운영 상황을 확인해 가능한 날짜에만 견적을 드려요. 문의가 곧 예약은 아니에요.</span></div>
       <div><div class="k">02 · 예약금 확정</div><b>예약금 20% 입금 시 확정</b><span>견적 승인 후 3일 안에 입금하시면 그때 날짜가 확정돼요. 그 전까지는 가예약이에요.</span></div>
       <div><div class="k">03 · 빠른 마감</div><b>연말 · 주말 · 공휴일은 빨리 차요</b><span>12월과 주말 저녁, 공휴일은 일찍 마감돼요. 원하는 날짜가 있다면 서둘러 문의해 주세요.</span></div>
@@ -538,7 +614,7 @@ footer{background:#0A1F17}
             <div class="chips" data-name="희망 지점" data-single>
               <button type="button" class="chip" data-v="청계 · 삼일빌딩">청계 · 삼일빌딩</button><button type="button" class="chip" data-v="서여의도 · 파라곤">서여의도 · 파라곤</button><button type="button" class="chip" data-v="상암">상암</button><button type="button" class="chip" data-v="마곡">마곡</button><button type="button" class="chip" data-v="동대문 · 두타">동대문 · 두타</button><button type="button" class="chip" data-v="추천해 주세요">추천해 주세요</button>
             </div></div>
-          <div class="fld"><div class="lb">대관 형태</div>
+          <div class="fld only-full"><div class="lb">대관 형태</div>
             <div class="chips" data-name="대관 형태" data-single>
               <button type="button" class="chip" data-v="전체 대관">전체 대관</button><button type="button" class="chip" data-v="부분 대관">부분 대관</button><button type="button" class="chip" data-v="룸">룸</button><button type="button" class="chip" data-v="추천해 주세요">추천해 주세요</button>
             </div></div>
@@ -548,7 +624,7 @@ footer{background:#0A1F17}
             </div></div>
         </div>
 
-        <div class="blk">
+        <div class="blk only-full">
           <h3><span class="num">4</span>패키지와 옵션</h3>
           <div class="fld"><div class="lb">패키지</div>
             <div class="pkopts" id="pkopts">
@@ -577,7 +653,7 @@ footer{background:#0A1F17}
             <input type="text" id="diet" data-name="식이 제한·알레르기" placeholder="예) 채식 3명, 갑각류 알레르기 1명"></div>
         </div>
 
-        <div class="blk">
+        <div class="blk only-full">
           <h3><span class="num">5</span>예산과 결제</h3>
           <div class="fld"><div class="lb">전체 예산</div>
             <div class="chips" data-name="예산" data-single>
@@ -612,7 +688,7 @@ footer{background:#0A1F17}
           <div class="fld" id="fAgree">
             <label class="chk"><input type="checkbox" id="agree"> <span><b>[필수]</b> 견적 안내를 위해 이름·이메일·전화번호·행사 정보를 수집하고, 상담이 끝난 뒤 1년간 보관하는 데 동의해요.</span></label>
             <div class="err">필수 항목에 모두 동의해 주세요.</div>
-            <label class="chk"><input type="checkbox" id="agree2"> <span><b>[필수]</b> 대관은 승인 후 진행되고, 예약금(20%) 입금 시 확정되며, <a href="#policy">취소·환불 규정</a>을 확인했어요.</span></label>
+            <label class="chk only-full"><input type="checkbox" id="agree2"> <span><b>[필수]</b> 대관은 승인 후 진행되고, 예약금(20%) 입금 시 확정되며, <a href="#policy">취소·환불 규정</a>을 확인했어요.</span></label>
             <label class="chk"><input type="checkbox" id="mkt"> <span>[선택] 탭샵바 이벤트·시즌 소식을 이메일로 받을게요.</span></label>
           </div>
           <div class="hp" aria-hidden="true"><label>Website <input type="text" id="website" tabindex="-1" autocomplete="off"></label></div>
@@ -634,7 +710,8 @@ footer{background:#0A1F17}
       </div>
       </div>
 
-      <aside class="est" id="est">
+      <aside class="est only-group" id="estG"><div class="k">GROUP · 단체 예약</div><div class="total" style="font-size:30px">점장이 직접 안내</div><div class="calc">세트 메뉴 · 1인 금액 · 좌석</div><ul><li><span>연락</span><span>24시간 안에</span></li><li><span>확정</span><span>점장 확인 후</span></li><li><span>12명 이하</span><span>네이버 예약</span></li></ul><div class="fine">금액은 지점·요일·메뉴에 따라 달라요.</div></aside>
+      <aside class="est only-full" id="est">
         <div class="k">ESTIMATE · 예상 금액</div>
         <div class="total" id="estTotal">225만원</div>
         <div class="calc" id="estCalc">1인 7.5만원 × 30명</div>
@@ -758,6 +835,23 @@ function setPk(p){ pkSel = p; $$('.pko').forEach(b => b.classList.toggle('on', b
 $$('.pko').forEach(b => b.addEventListener('click', () => setPk(b.dataset.p)));
 $$('[data-pick]').forEach(b => b.addEventListener('click', () => { setPk(b.dataset.pick); $('#inquiry').scrollIntoView({behavior:'smooth'}); }));
 
+// ---------- 예약 유형 (단체 / 전체 대관) ----------
+let MODE = 'full';
+function setMode(m){
+  MODE = m; document.body.classList.toggle('m-group', m==='group'); document.body.classList.toggle('m-full', m==='full');
+  $$('#modes button').forEach(b => b.classList.toggle('on', b.dataset.mode===m));
+  const kind = document.querySelector('.chips[data-name="대관 형태"]');
+  if (m==='full') { const c = kind.querySelector('.chip[data-v="전체 대관"]'); if (c && !kind.querySelector('.chip.on')) c.classList.add('on'); if ((+gIn.value||0) < 30) { gIn.value = 40; gR.value = 40; } }
+  else { kind.querySelectorAll('.chip').forEach(x => x.classList.remove('on')); if ((+gIn.value||0) > 30 || (+gIn.value||0) < 13) { gIn.value = 20; gR.value = 20; } }
+  drawCal && drawCal(); update && update();
+}
+$$('#modes button').forEach(b => b.addEventListener('click', () => setMode(b.dataset.mode)));
+document.addEventListener('click', e => {
+  const t = e.target.closest('[data-track]'); if (!t) return;
+  const tr = t.dataset.track;
+  if (tr === 'table') { e.preventDefault(); location.href = '/reservation/'; return; }
+  e.preventDefault(); setMode(tr); $('#inquiry').scrollIntoView({behavior:'smooth'});
+});
 // guests
 const gIn = $('#guests'), gR = $('#grange');
 $$('[data-g]').forEach(b => b.addEventListener('click', () => { gIn.value = Math.max(4, Math.min(300, (+gIn.value||0) + (+b.dataset.g))); gR.value = Math.min(120,gIn.value); update(); }));
@@ -843,6 +937,28 @@ function update(){
   const fl = $('#eFlag'); fl.style.display = flags.length ? 'block' : 'none'; fl.innerHTML = flags.join('<br>');
 }
 update();
+setMode(new URLSearchParams(location.search).get('type')==='group' ? 'group' : 'full');
+// ---------- /reservation 에서 넘어온 값 미리 채우기 (두 번 묻지 않기) ----------
+(function(){
+  const q = new URLSearchParams(location.search);
+  const g = +q.get('g'), d = q.get('d'), t = q.get('t'), br = q.get('b');
+  if (!g && !d && !br) return;
+  const chipOn = (name, pred) => { const grp = document.querySelector(`.chips[data-name="${name}"]`); if(!grp) return null; const c = [...grp.querySelectorAll('.chip')].find(pred); if (c) { if (grp.hasAttribute('data-single')) grp.querySelectorAll('.chip').forEach(x=>x.classList.remove('on')); c.classList.add('on'); } return grp; };
+  const hide = el => el && el.setAttribute('data-pf','');
+  const parts = [];
+  if (g) { gIn.value = g; gR.value = Math.min(120, g); hide(gIn.closest('.fld')); parts.push(g + '명'); }
+  if (br && br !== 'any') { const grp = chipOn('희망 지점', c => (c.dataset.v||'').startsWith(br)); if (grp) { hide(grp.closest('.fld')); parts.push(br); } }
+  if (d && /^\d{4}-\d{2}-\d{2}$/.test(d)) { picked = [d]; const dd = new Date(d+'T12:00:00'); view = new Date(dd.getFullYear(), dd.getMonth(), 1); drawPicked(); const grp = chipOn('날짜 유연성', c => c.dataset.v === '날짜 확정'); hide(grp && grp.closest('.fld')); hide(document.getElementById('cal').closest('.fld')); parts.push(dd.getMonth()+1 + '/' + dd.getDate() + '(' + '일월화수목금토'[dd.getDay()] + ')'); }
+  const TM = {lunch:'점심', afternoon:'오후', dinner:'저녁', late:'늦은 저녁'};
+  if (t && TM[t]) { const grp = chipOn('시작 시간', c => (c.dataset.v||'').startsWith(TM[t] + ' ')); hide(grp && grp.closest('.fld')); parts.push(TM[t]); }
+  const box = document.createElement('div'); box.className = 'pf-box';
+  box.innerHTML = '<div><span>예약 페이지에서 고른 내용</span><b>' + parts.join(' · ') + '</b></div><button type="button">수정하기</button>';
+  box.querySelector('button').onclick = () => document.body.classList.remove('prefilled');
+  document.getElementById('f').prepend(box);
+  document.body.classList.add('prefilled');
+  drawCal(); update();
+  setTimeout(() => document.getElementById('inquiry').scrollIntoView({behavior:'instant'}), 50);
+})();
 
 // source
 const qs = new URLSearchParams(location.search);
@@ -856,7 +972,7 @@ $('#f').addEventListener('submit', async ev => {
   $('#fName').classList.toggle('bad', !name); if(!name) ok = false;
   const em = (IS_STORE && !email) || /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email); $('#fEmail').classList.toggle('bad', !em); if(!em) ok = false;
   if (IS_STORE && !$('#tel').value.trim()) { ok = false; $('#tel').closest('.fld').classList.add('bad'); $('#tel').focus(); }
-  const ag = $('#agree').checked && $('#agree2').checked; $('#fAgree').classList.toggle('bad', !ag); if(!ag) ok = false;
+  const ag = $('#agree').checked && (MODE==='group' || $('#agree2').checked); $('#fAgree').classList.toggle('bad', !ag); if(!ag) ok = false;
   const gOk = (+gIn.value||0) >= 1; gIn.closest('.fld').classList.toggle('bad', !gOk); if(!gOk) ok = false;
   if(!ok){ const b = document.querySelector('.fld.bad'); b && b.scrollIntoView({behavior:'smooth', block:'center'}); return; }
   const btn = $('#sendBtn'); btn.disabled = true; btn.textContent = T.sending;
@@ -864,12 +980,12 @@ $('#f').addEventListener('submit', async ev => {
   const secs = Math.round((Date.now()-t0)/1000);
   const data = {
     '이름': name, '이메일': email, '전화번호': $('#tel').value.trim(), '연락 선호': chipVal('연락 선호'), '인스타그램 ID': $('#ig').value.trim(),
-    '행사 종류': chipVal('행사 종류'), '행사 설명': $('#desc').value.trim(), '희망 지점': chipVal('희망 지점'), '대관 형태': chipVal('대관 형태'), '좌석 형태': chipVal('좌석 형태'),
+    '행사 종류': chipVal('행사 종류'), '행사 설명': $('#desc').value.trim(), '희망 지점': chipVal('희망 지점'), '대관 형태': MODE==='group' ? '단체 예약(부분 대관)' : chipVal('대관 형태'), '좌석 형태': chipVal('좌석 형태'),
     '날짜 유연성': chipVal('날짜 유연성'), '시작 시간': chipVal('시작 시간'), '이용 시간': chipVal('이용 시간').replace(/\s*기본/,''), '예상 인원': String(gIn.value),
-    '패키지': pkSel==='D' ? 'CUSTOM · 맞춤 견적' : `${PK[pkSel].n} · 1인 ${PK[pkSel].p}만원`,
+    '패키지': MODE==='group' ? '단체 · 점장 안내' : pkSel==='D' ? 'CUSTOM · 맞춤 견적' : `${PK[pkSel].n} · 1인 ${PK[pkSel].p}만원`,
     '음식 추가 옵션': chipVal('음식 추가 옵션'), '음료·와인 옵션': chipVal('음료·와인 옵션'), '연출·장비 옵션': chipVal('연출·장비 옵션'), '서비스 옵션': chipVal('서비스 옵션'),
     '식이 제한·알레르기': $('#diet').value.trim(), '예산': chipVal('예산'), '결제·증빙': chipVal('결제·증빙'), '알게 된 경로': chipVal('알게 된 경로'),
-    '요청사항·질문': $('#note').value.trim(), '예상 금액': `${e.total} (${e.calc})`, '개인정보 동의': '동의(규정 확인 포함)', '마케팅 수신 동의': $('#mkt').checked ? '동의' : '미동의', '유입 경로': (IS_STORE ? '매장:' + STORE + ' | ' : '') + src,
+    '요청사항·질문': $('#note').value.trim(), '예상 금액': MODE==='group' ? '단체 · 점장 안내' : `${e.total} (${e.calc})`, '개인정보 동의': '동의(규정 확인 포함)', '마케팅 수신 동의': $('#mkt').checked ? '동의' : '미동의', '유입 경로': (IS_STORE ? '매장:' + STORE + ' | ' : '') + src,
     '희망 날짜 1': picked[0]||'', '희망 날짜 2': picked[1]||'', '희망 날짜 3': picked[2]||'',
     '언어': LANG, '봇체크': `v1|${secs}|${$('#website').value ? 'hp' : 'ok'}`,
   };
@@ -877,7 +993,7 @@ $('#f').addEventListener('submit', async ev => {
   Object.entries(data).forEach(([k,v]) => { if(v && ENTRY[k]) body.append(ENTRY[k], v); });
   try { await fetch(FORM_ACTION, {method:'POST', mode:'no-cors', body}); } catch(err) {}
   $('#f').style.display = 'none'; $('#mbar').classList.remove('show');
-  $('#doneTotal').textContent = eShow.total; $('#doneCalc').textContent = eShow.calc + ' · ' + T.ref;
+  if (MODE==='group') { $('#doneTotal').textContent = '점장이 24시간 안에 연락드려요'; $('#doneCalc').textContent = '세트 메뉴 · 1인 금액 · 좌석을 안내해 드려요'; $$('#done ol li').forEach((li,i)=>{ if(i>0) li.style.display='none'; }); } else { $('#doneTotal').textContent = eShow.total; $('#doneCalc').textContent = eShow.calc + ' · ' + T.ref; }
   const d = $('#done'); d.style.display = 'block'; d.scrollIntoView({behavior:'smooth', block:'start'});
 });
 
