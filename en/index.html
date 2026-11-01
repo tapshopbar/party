@@ -101,6 +101,63 @@ section{padding:110px 0;scroll-margin-top:60px}
 .sp-row .sp{min-height:240px}
 @media(max-width:900px){.sp-grid,.sp-row{grid-template-columns:1fr}.sp.big{min-height:420px;grid-row:auto}}
 
+/* case */
+.case{background:var(--cream)}
+.case-grid{display:grid;grid-template-columns:1.55fr 1fr 1fr;grid-template-rows:270px 270px;gap:14px;margin-top:44px}
+.case-grid figure{margin:0;position:relative;border-radius:18px;overflow:hidden;background:#111}
+.case-grid img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.case-grid figure:hover img{transform:scale(1.03)}
+.case-grid figcaption{position:absolute;left:14px;bottom:12px;font-size:12.5px;color:var(--cream);background:rgba(14,14,14,.55);backdrop-filter:blur(6px);padding:4px 11px;border-radius:999px}
+.case-grid .c1{grid-row:span 2}.case-grid .c3{grid-row:span 2}
+.case-facts{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:22px}
+.case-facts div{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:18px 18px 16px}
+.case-facts i{font-style:normal;font-size:11.5px;letter-spacing:.14em;color:var(--rose);font-weight:700}
+.case-facts b{display:block;font-size:16.5px;margin:8px 0 4px;line-height:1.3}
+.case-facts span{font-size:13.5px;color:var(--sub);line-height:1.55}
+.case-note{margin:18px 0 0;font-size:13px;color:var(--sub)}
+.case .btn{margin-top:26px}
+.cp{margin-top:56px;background:var(--navy);color:var(--cream);border-radius:26px;padding:48px 44px}
+.cp .eyebrow{color:var(--yellow)}
+.cp h3{font-size:clamp(26px,3.4vw,38px);margin:12px 0 10px;letter-spacing:-.02em;line-height:1.25}
+.cp .sub{color:rgba(255,253,252,.72);font-size:15.5px;margin:0;max-width:640px}
+.cp-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:34px;align-items:start}
+.rcpt{background:var(--cream);color:var(--ink);border-radius:18px;padding:26px 26px 22px;position:relative}
+.rcpt .hd{display:flex;justify-content:space-between;font-size:12px;letter-spacing:.14em;color:var(--sub);font-weight:700;border-bottom:1.5px dashed #cfc8c4;padding-bottom:12px}
+.rcpt ul{list-style:none;margin:6px 0 0;padding:0}
+.rcpt li{display:flex;justify-content:space-between;gap:14px;padding:10px 0;border-bottom:1px solid var(--line);font-size:14.5px}
+.rcpt li span{color:#333}
+.rcpt li b{white-space:nowrap;font-variant-numeric:tabular-nums}
+.rcpt li.free b{color:var(--wine2)}
+.rcpt li.free b:after{content:" ✓";font-size:12px}
+.rcpt .tot{display:flex;justify-content:space-between;align-items:baseline;padding:16px 0 4px;border-top:1.5px dashed #cfc8c4;margin-top:8px}
+.rcpt .tot b{font-size:24px;font-variant-numeric:tabular-nums}
+.rcpt .fine{font-size:12.5px;color:var(--sub);margin:2px 0 0}
+.pp{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px}
+.pp div{background:var(--wine);color:var(--cream);border-radius:14px;padding:14px 16px}
+.pp i{font-style:normal;font-size:11.5px;letter-spacing:.12em;opacity:.75;font-weight:700}
+.pp b{display:block;font-size:22px;margin-top:4px;font-variant-numeric:tabular-nums}
+.cmp h4{margin:0 0 6px;font-size:17px}
+.cmp .cap{font-size:13px;color:rgba(255,253,252,.62);margin:0 0 18px}
+.bar{margin:0 0 16px}
+.bar .l{display:flex;justify-content:space-between;font-size:13.5px;margin-bottom:6px;color:rgba(255,253,252,.85)}
+.bar .l b{font-variant-numeric:tabular-nums}
+.bar .t{height:12px;border-radius:999px;background:rgba(255,253,252,.1);overflow:hidden}
+.bar .t i{display:block;height:100%;border-radius:999px;background:rgba(255,253,252,.45)}
+.bar.us .l{color:var(--yellow);font-weight:700}
+.bar.us .t i{background:var(--yellow);min-width:10px}
+.cmp table{width:100%;border-collapse:collapse;margin-top:22px;font-size:13.5px}
+.cmp th,.cmp td{text-align:left;padding:10px 6px;border-bottom:1px solid rgba(255,253,252,.14);vertical-align:top}
+.cmp th{font-size:11.5px;letter-spacing:.12em;color:rgba(255,253,252,.55);font-weight:700}
+.cmp td.us{color:var(--yellow);font-weight:700;white-space:nowrap}
+.cmp td.o{color:rgba(255,253,252,.75)}
+.cp .src{font-size:12px;color:rgba(255,253,252,.5);margin:22px 0 0;line-height:1.6}
+.cp .btn{margin-top:22px;background:var(--yellow);color:var(--ink)}
+.pp b{white-space:nowrap}
+@media(max-width:900px){.cp{padding:32px 20px}.cp-grid{grid-template-columns:1fr}}
+@media(max-width:520px){.rcpt{padding:20px 16px 18px}.rcpt .hd{flex-direction:column;gap:2px}.rcpt li{font-size:13.5px}.rcpt .tot b{font-size:21px}.pp b{font-size:18px}.pp i{letter-spacing:.04em}.cmp td,.cmp th{padding:9px 4px;font-size:12.5px}.cmp td.us{white-space:normal}}
+@media(max-width:900px){.case-grid{grid-template-columns:1fr 1fr;grid-template-rows:240px 230px 240px}.case-grid .c1{grid-column:span 2;grid-row:auto}.case-grid .c3{grid-row:auto}.case-grid .c4{grid-column:span 2}.case-facts{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.case-facts{grid-template-columns:1fr}}
+
 /* packages */
 .pk-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:44px}
 .pk{background:#fff;border:1px solid var(--line);border-radius:22px;padding:28px 24px;display:flex;flex-direction:column}
@@ -480,6 +537,70 @@ footer{background:#0A1F17}
   </div>
 </section>
 
+<section class="case" id="case">
+  <div class="wrap reveal">
+    <div class="eyebrow" style="color:var(--rose)">Real Case · A recent private event</div>
+    <h2 style="margin:12px 0 14px">Last Saturday: a wedding after-party that took over our Cheonggye store.</h2>
+    <p class="lead">2026.10.31 · Cheonggye (Samil Bldg) full buyout · 110–120 guests · daytime. After the ceremony, the couple kept the afternoon going with close guests and a glass of wine.</p>
+    <div class="case-grid">
+      <figure class="c1"><img src="../assets/case_1031_01.jpg" alt="Cheonggye full buyout, lounge with the media wall" loading="lazy"><figcaption>Media wall + lounge sofas</figcaption></figure>
+      <figure class="c2"><img src="../assets/case_1031_02.jpg" alt="Cocktail bar styled by the couple, with the wine wall behind" loading="lazy"><figcaption>Cocktail bar styled by the couple</figcaption></figure>
+      <figure class="c3"><img src="../assets/case_1031_03.jpg" style="object-position:center 62%" alt="Wall with wedding posters and candles" loading="lazy"><figcaption>Poster & candle wall</figcaption></figure>
+      <figure class="c4"><img src="../assets/case_1031_04.jpg" style="object-position:center 68%" alt="Flower table at the entrance" loading="lazy"><figcaption>Flower table</figcaption></figure>
+    </div>
+    <div class="case-facts">
+      <div><i>SPACE</i><b>Full buyout, Cheonggye</b><span>The hall, lounge sofas and central stairs, all yours. We move and reset the tables.</span></div>
+      <div><i>DECO</i><b>Bring your own decor</b><span>Posters, candles, flowers and a cocktail bar, all prepared by the couple. Load-in the night before, setup from the morning.</span></div>
+      <div><i>MEDIA</i><b>Media wall + mic</b><span>Video across the whole wall, plus a mic for greetings and toasts.</span></div>
+      <div><i>FOOD &amp; WINE</i><b>13 finger foods + 88 bottles</b><span>200 portions of finger food plus wine, beer and sake on a minimum-spend basis. Extra orders on the day are fine.</span></div>
+    </div>
+    <p class="case-note">Photos shared with the hosts' consent. Only the media-wall image is a sample.</p>
+
+    <div class="cp">
+      <div class="eyebrow">Price Breakdown · The receipt</div>
+      <h3>₩0 venue fee. Six hours, all yours. About ₩44,000 a guest.</h3>
+      <p class="sub">Space, equipment, setup and cleanup: ₩0. The hosts paid only for what guests ate and drank. Here is every line, nothing hidden.</p>
+      <div class="cp-grid">
+        <div class="rcpt">
+          <div class="hd"><span>TAP SHOP BAR · Cheonggye</span><span>2026.10.31 SAT</span></div>
+          <ul>
+            <li class="free"><span>Full buyout, 6 hours (11:00–17:00)</span><b>₩0</b></li>
+            <li class="free"><span>Load-in the night before · setup from 09:30</span><b>₩0</b></li>
+            <li class="free"><span>Media wall · projectors · mic</span><b>₩0</b></li>
+            <li class="free"><span>Table layout · cleanup after</span><b>₩0</b></li>
+            <li><span>13 finger foods · 200 portions</span><b>₩3,205,000</b></li>
+            <li><span>48 bottles of wine & sake (8 kinds) + 40 beers (4 kinds)</span><b>₩1,783,800</b></li>
+            <li><span>30 soft drinks</span><b>₩105,000</b></li>
+          </ul>
+          <div class="tot"><span>Total (VAT incl.)</span><b>₩5,093,800</b></div>
+          <p class="fine">Only extra orders on the day are separate. No venue fee, equipment fee, setup fee or service charge.</p>
+          <div class="pp">
+            <div><i>Per guest · 115 guests</i><b>≈ ₩44,300</b></div>
+            <div><i>Per guest, per hour</i><b>≈ ₩7,400</b></div>
+          </div>
+        </div>
+        <div class="cmp">
+          <h4>The same Saturday, somewhere else</h4>
+          <p class="cap">What you pay just for the space and basic AV, before any food or drink</p>
+          <div class="bar us"><div class="l"><span>TAP SHOP BAR Cheonggye · 6 h</span><b>₩0</b></div><div class="t"><i style="width:0"></i></div></div>
+          <div class="bar"><div class="l"><span>Hannam house venue, after-party · 4 h</span><b>₩4.6M</b></div><div class="t"><i style="width:73%"></i></div></div>
+          <div class="bar"><div class="l"><span>Itaewon house venue, Saturday · 4 h</span><b>₩6.3M</b></div><div class="t"><i style="width:100%"></i></div></div>
+          <table>
+            <tr><th></th><th>TAP SHOP BAR</th><th>Other Seoul wedding & party venues</th></tr>
+            <tr><td>Venue fee</td><td class="us">₩0</td><td class="o">₩2.4M–9.9M</td></tr>
+            <tr><td>Sound · mic</td><td class="us">₩0</td><td class="o">₩0.8M–1M</td></tr>
+            <tr><td>Time</td><td class="us">6 h + load-in the night before</td><td class="o">2–4.5 h</td></tr>
+            <tr><td>Food & drink per guest</td><td class="us">≈ ₩44,000 · wine included</td><td class="o">₩80,000+ (restaurant course), ₩130,000+ (wedding hall / hotel)</td></tr>
+            <tr><td>Bring your own decor</td><td class="us">Welcome</td><td class="o">Flowers ₩1.9M–7.5M; some ban outside vendors</td></tr>
+          </table>
+          <p class="src">Comparison figures come from 2026 published venue prices and Korea Consumer Agency price disclosures. Venue names are withheld; prices vary by date, headcount and setup. Ours vary by event too.</p>
+          <a class="btn" href="#inquiry">Get a quote for your date</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section id="packages">
   <div class="wrap reveal">
     <div class="eyebrow" style="color:var(--rose)">Packages</div>
@@ -598,7 +719,7 @@ footer{background:#0A1F17}
             <div class="chips" data-name="시작 시간" data-single>
               <button type="button" class="chip" data-v="점심 11~14시">Lunch <small>11am–2pm</small></button><button type="button" class="chip" data-v="오후 14~17시">Afternoon <small>2–5pm</small></button><button type="button" class="chip" data-v="저녁 18~21시">Evening <small>6–9pm</small></button><button type="button" class="chip" data-v="늦은 저녁 21시~">Late evening <small>9pm onward</small></button><button type="button" class="chip" data-v="상담 후 결정">Decide after consultation</button>
             </div></div>
-          <div class="fld"><div class="lb">Duration</div>
+          <div class="fld"><div class="lb">Time</div>
             <div class="chips" data-name="이용 시간" data-single>
               <button type="button" class="chip" data-v="2시간">2 hours</button><button type="button" class="chip on" data-v="3시간 기본">3 hours <small>Standard</small></button><button type="button" class="chip" data-v="4시간">4 hours</button><button type="button" class="chip" data-v="5시간 이상">5+ hours</button>
             </div></div>
