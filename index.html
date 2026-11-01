@@ -101,6 +101,63 @@ section{padding:110px 0;scroll-margin-top:60px}
 .sp-row .sp{min-height:240px}
 @media(max-width:900px){.sp-grid,.sp-row{grid-template-columns:1fr}.sp.big{min-height:420px;grid-row:auto}}
 
+/* case */
+.case{background:var(--cream)}
+.case-grid{display:grid;grid-template-columns:1.55fr 1fr 1fr;grid-template-rows:270px 270px;gap:14px;margin-top:44px}
+.case-grid figure{margin:0;position:relative;border-radius:18px;overflow:hidden;background:#111}
+.case-grid img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.case-grid figure:hover img{transform:scale(1.03)}
+.case-grid figcaption{position:absolute;left:14px;bottom:12px;font-size:12.5px;color:var(--cream);background:rgba(14,14,14,.55);backdrop-filter:blur(6px);padding:4px 11px;border-radius:999px}
+.case-grid .c1{grid-row:span 2}.case-grid .c3{grid-row:span 2}
+.case-facts{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:22px}
+.case-facts div{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:18px 18px 16px}
+.case-facts i{font-style:normal;font-size:11.5px;letter-spacing:.14em;color:var(--rose);font-weight:700}
+.case-facts b{display:block;font-size:16.5px;margin:8px 0 4px;line-height:1.3}
+.case-facts span{font-size:13.5px;color:var(--sub);line-height:1.55}
+.case-note{margin:18px 0 0;font-size:13px;color:var(--sub)}
+.case .btn{margin-top:26px}
+.cp{margin-top:56px;background:var(--navy);color:var(--cream);border-radius:26px;padding:48px 44px}
+.cp .eyebrow{color:var(--yellow)}
+.cp h3{font-size:clamp(26px,3.4vw,38px);margin:12px 0 10px;letter-spacing:-.02em;line-height:1.25}
+.cp .sub{color:rgba(255,253,252,.72);font-size:15.5px;margin:0;max-width:640px}
+.cp-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:34px;align-items:start}
+.rcpt{background:var(--cream);color:var(--ink);border-radius:18px;padding:26px 26px 22px;position:relative}
+.rcpt .hd{display:flex;justify-content:space-between;font-size:12px;letter-spacing:.14em;color:var(--sub);font-weight:700;border-bottom:1.5px dashed #cfc8c4;padding-bottom:12px}
+.rcpt ul{list-style:none;margin:6px 0 0;padding:0}
+.rcpt li{display:flex;justify-content:space-between;gap:14px;padding:10px 0;border-bottom:1px solid var(--line);font-size:14.5px}
+.rcpt li span{color:#333}
+.rcpt li b{white-space:nowrap;font-variant-numeric:tabular-nums}
+.rcpt li.free b{color:var(--wine2)}
+.rcpt li.free b:after{content:" ✓";font-size:12px}
+.rcpt .tot{display:flex;justify-content:space-between;align-items:baseline;padding:16px 0 4px;border-top:1.5px dashed #cfc8c4;margin-top:8px}
+.rcpt .tot b{font-size:24px;font-variant-numeric:tabular-nums}
+.rcpt .fine{font-size:12.5px;color:var(--sub);margin:2px 0 0}
+.pp{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px}
+.pp div{background:var(--wine);color:var(--cream);border-radius:14px;padding:14px 16px}
+.pp i{font-style:normal;font-size:11.5px;letter-spacing:.12em;opacity:.75;font-weight:700}
+.pp b{display:block;font-size:22px;margin-top:4px;font-variant-numeric:tabular-nums}
+.cmp h4{margin:0 0 6px;font-size:17px}
+.cmp .cap{font-size:13px;color:rgba(255,253,252,.62);margin:0 0 18px}
+.bar{margin:0 0 16px}
+.bar .l{display:flex;justify-content:space-between;font-size:13.5px;margin-bottom:6px;color:rgba(255,253,252,.85)}
+.bar .l b{font-variant-numeric:tabular-nums}
+.bar .t{height:12px;border-radius:999px;background:rgba(255,253,252,.1);overflow:hidden}
+.bar .t i{display:block;height:100%;border-radius:999px;background:rgba(255,253,252,.45)}
+.bar.us .l{color:var(--yellow);font-weight:700}
+.bar.us .t i{background:var(--yellow);min-width:10px}
+.cmp table{width:100%;border-collapse:collapse;margin-top:22px;font-size:13.5px}
+.cmp th,.cmp td{text-align:left;padding:10px 6px;border-bottom:1px solid rgba(255,253,252,.14);vertical-align:top}
+.cmp th{font-size:11.5px;letter-spacing:.12em;color:rgba(255,253,252,.55);font-weight:700}
+.cmp td.us{color:var(--yellow);font-weight:700;white-space:nowrap}
+.cmp td.o{color:rgba(255,253,252,.75)}
+.cp .src{font-size:12px;color:rgba(255,253,252,.5);margin:22px 0 0;line-height:1.6}
+.cp .btn{margin-top:22px;background:var(--yellow);color:var(--ink)}
+.pp b{white-space:nowrap}
+@media(max-width:900px){.cp{padding:32px 20px}.cp-grid{grid-template-columns:1fr}}
+@media(max-width:520px){.rcpt{padding:20px 16px 18px}.rcpt .hd{flex-direction:column;gap:2px}.rcpt li{font-size:13.5px}.rcpt .tot b{font-size:21px}.pp b{font-size:18px}.pp i{letter-spacing:.04em}.cmp td,.cmp th{padding:9px 4px;font-size:12.5px}.cmp td.us{white-space:normal}}
+@media(max-width:900px){.case-grid{grid-template-columns:1fr 1fr;grid-template-rows:240px 230px 240px}.case-grid .c1{grid-column:span 2;grid-row:auto}.case-grid .c3{grid-row:auto}.case-grid .c4{grid-column:span 2}.case-facts{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.case-facts{grid-template-columns:1fr}}
+
 /* packages */
 .pk-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:44px}
 .pk{background:#fff;border:1px solid var(--line);border-radius:22px;padding:28px 24px;display:flex;flex-direction:column}
@@ -476,6 +533,70 @@ footer{background:#0A1F17}
       <div class="sp"><img src="assets/loc_sangam.jpg" alt="상암점" loading="lazy"><div class="t"><h3>상암 · DMC</h3><p>방송·미디어 단지 한가운데. 회사 모임에 좋아요.</p></div></div>
       <div class="sp"><img src="assets/loc_magok.jpg" alt="마곡점" loading="lazy"><div class="t"><h3>마곡 · VL르웨스트</h3><p>유리 벽 화이트 소파 룸, 4~8인.</p></div></div>
       <div class="sp"><img src="assets/loc_dongdaemun.jpg" alt="동대문 두타점" loading="lazy"><div class="t"><h3>동대문 · 두타</h3><p>두타몰 안, 룸 6~8인. 쇼핑 끝에 한 잔.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="case" id="case">
+  <div class="wrap reveal">
+    <div class="eyebrow" style="color:var(--rose)">Real Case · 실제 대관 사례</div>
+    <h2 style="margin:12px 0 14px">지난 토요일, 청계를 통째로 빌린 웨딩 애프터파티.</h2>
+    <p class="lead">2026.10.31 · 청계 삼일빌딩점 전체 대관 · 110~120명 · 낮 시간. 본식을 마친 두 사람이 가까운 하객과 와인 한 잔으로 이어 간 오후예요.</p>
+    <div class="case-grid">
+      <figure class="c1"><img src="assets/case_1031_01.jpg" alt="청계 삼일빌딩점 전체 대관, 미디어월이 있는 라운지" loading="lazy"><figcaption>미디어월 + 라운지 소파석</figcaption></figure>
+      <figure class="c2"><img src="assets/case_1031_02.jpg" alt="신랑신부가 직접 꾸민 칵테일 바와 와인 셀러" loading="lazy"><figcaption>직접 꾸민 칵테일 바</figcaption></figure>
+      <figure class="c3"><img src="assets/case_1031_03.jpg" style="object-position:center 62%" alt="웨딩 포스터와 캔들이 놓인 벽" loading="lazy"><figcaption>포스터 · 캔들 월</figcaption></figure>
+      <figure class="c4"><img src="assets/case_1031_04.jpg" style="object-position:center 68%" alt="입구의 플라워 테이블 세팅" loading="lazy"><figcaption>플라워 테이블</figcaption></figure>
+    </div>
+    <div class="case-facts">
+      <div><i>SPACE</i><b>청계 전체 대관</b><span>홀과 라운지 소파석, 중앙 계단까지 통째로. 테이블 이동과 정리는 매장이 해요.</span></div>
+      <div><i>DECO</i><b>직접 꾸미기 OK</b><span>포스터·캔들·꽃·칵테일 바를 두 사람이 직접 준비. 전날 밤 반입, 당일 아침부터 세팅.</span></div>
+      <div><i>MEDIA</i><b>미디어월 + 마이크</b><span>벽면 가득 영상을 띄우고, 마이크로 인사말과 축사까지.</span></div>
+      <div><i>FOOD &amp; WINE</i><b>핑거푸드 13종 + 와인 88병</b><span>200인분 핑거푸드와 와인·맥주·사케를 게런티로 준비. 현장 추가 주문도 가능해요.</span></div>
+    </div>
+    <p class="case-note">사진은 주최 측 동의를 받아 올렸어요. 미디어월 화면만 예시 이미지로 바꿨어요.</p>
+
+    <div class="cp">
+      <div class="eyebrow">Price Breakdown · 이 파티의 영수증</div>
+      <h3>대관료 0원. 6시간 통째로. 1인 4.4만원.</h3>
+      <p class="sub">공간과 장비, 세팅과 정리는 0원. 실제로 낸 건 손님이 먹고 마신 만큼이에요. 숨은 항목 없이 그대로 보여 드려요.</p>
+      <div class="cp-grid">
+        <div class="rcpt">
+          <div class="hd"><span>TAP SHOP BAR · 청계</span><span>2026.10.31 SAT</span></div>
+          <ul>
+            <li class="free"><span>청계 전체 대관 6시간 (11:00~17:00)</span><b>0원</b></li>
+            <li class="free"><span>전날 밤 물품 반입 · 당일 09:30부터 세팅</span><b>0원</b></li>
+            <li class="free"><span>미디어월 · 빔프로젝터 · 마이크</span><b>0원</b></li>
+            <li class="free"><span>테이블 재배치 · 행사 후 정리</span><b>0원</b></li>
+            <li><span>핑거푸드 13종 · 200인분</span><b>3,205,000원</b></li>
+            <li><span>와인·사케 8종 48병 + 맥주 4종 40병</span><b>1,783,800원</b></li>
+            <li><span>탄산음료 30병</span><b>105,000원</b></li>
+          </ul>
+          <div class="tot"><span>합계 (VAT 포함)</span><b>5,093,800원</b></div>
+          <p class="fine">현장 추가 주문만 별도. 대관료 · 장비 사용료 · 세팅비 · 서비스 차지 없음.</p>
+          <div class="pp">
+            <div><i>1인당 · 115명 기준</i><b>약 44,300원</b></div>
+            <div><i>1인 1시간당</i><b>약 7,400원</b></div>
+          </div>
+        </div>
+        <div class="cmp">
+          <h4>같은 토요일, 다른 곳이라면</h4>
+          <p class="cap">음식·음료를 빼고 공간과 기본 장비에만 내는 돈</p>
+          <div class="bar us"><div class="l"><span>탭샵바 청계 · 6시간</span><b>0원</b></div><div class="t"><i style="width:0"></i></div></div>
+          <div class="bar"><div class="l"><span>한남 하우스 애프터파티 · 4시간</span><b>460만원</b></div><div class="t"><i style="width:73%"></i></div></div>
+          <div class="bar"><div class="l"><span>이태원 하우스 토요일 · 4시간</span><b>630만원</b></div><div class="t"><i style="width:100%"></i></div></div>
+          <table>
+            <tr><th></th><th>탭샵바</th><th>서울 웨딩·파티 공간</th></tr>
+            <tr><td>대관료</td><td class="us">0원</td><td class="o">240만~990만원</td></tr>
+            <tr><td>음향 · 마이크</td><td class="us">0원</td><td class="o">80만~100만원</td></tr>
+            <tr><td>이용 시간</td><td class="us">6시간 + 전날 반입</td><td class="o">2~4.5시간</td></tr>
+            <tr><td>1인 식음료</td><td class="us">4.4만원 · 와인 포함</td><td class="o">8만원~ (레스토랑 코스), 13만원~ (예식장·호텔)</td></tr>
+            <tr><td>데코 반입</td><td class="us">자유</td><td class="o">플라워 190만~750만원, 외부 반입 제한도 있음</td></tr>
+          </table>
+          <p class="src">비교 금액은 2026년 업체 공개가와 한국소비자원 참가격 공개 자료 기준이에요. 업체명은 밝히지 않았고, 날짜·인원·구성에 따라 달라질 수 있어요. 탭샵바 금액도 행사마다 달라요.</p>
+          <a class="btn" href="#inquiry">우리 날짜로 견적 받기</a>
+        </div>
+      </div>
     </div>
   </div>
 </section>
