@@ -601,6 +601,10 @@ footer{background:#0A1F17}
   </div>
 </section>
 
+<!-- 오늘의 대관 후기 (매일 09시 1개, 후기 0개면 안 보임) · tsb.wine/event/assets/today-review.js -->
+<div id="tsb-today-review"></div>
+
+
 <section id="packages">
   <div class="wrap reveal">
     <div class="eyebrow" style="color:var(--rose)">Packages</div>
@@ -1134,5 +1138,6 @@ fetch('faq.json?v=' + Date.now()).then(r => r.json()).then(j => {
 }).catch(() => renderFaq());
 $('#faqQ').addEventListener('input', renderFaq);
 </script>
+<script src="https://tsb.wine/event/assets/today-review.js" defer></script>
 </body>
 </html>
